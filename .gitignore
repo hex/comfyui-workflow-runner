@@ -1,28 +1,21 @@
-# Transient files
-*.lock
-*.tmp
-*.bak
+# Session management (cs tool)
+.cs/
+.claude/
+CLAUDE.md
 
-# Archives (large, regenerated from artifacts)
-.cs/archives/
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
 
-# Session cooldown markers
-.cs/.discoveries-reminder-cooldown
+# Test fixtures (large captured workflows)
+tests/fixtures/
 
-# Command tracker internal state
-.cs/command-dates.txt
-.cs/promoted-commands.txt
-
-# Claude Code local settings (recreated by cs on each machine)
-.claude/settings.local.json
-
-# OS files
+# OS / editor
 .DS_Store
 Thumbs.db
-
-# Editor files
 .vscode/
 .idea/
 *.swp
-*.swo
 *~
