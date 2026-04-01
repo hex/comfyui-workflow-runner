@@ -49,6 +49,13 @@ async function exportApiFormat(originalGraphToPrompt) {
   }
 }
 
+// Match the workflow save endpoint (path separator may be URL-encoded as %2F)
+function isWorkflowSave(route, method) {
+  if (method !== "POST" && method !== "PUT") return false;
+  if (route.startsWith("/workflow-runner/")) return false;
+  return route.includes("/userdata/") && route.includes("workflow");
+}
+
 app.registerExtension({
   name: "workflow-runner.auto-export",
 
@@ -62,18 +69,19 @@ app.registerExtension({
       return result;
     };
 
-    // Intercept fetchApi to detect any workflow save (manual, auto-save, save-as).
-    // ComfyUI saves workflows via POST/PUT to /api/userdata/workflows/
+    // Intercept fetchApi to detect workflow saves (manual, auto-save, save-as)
     const originalFetchApi = api.fetchApi.bind(api);
     api.fetchApi = async function (route, options, ...rest) {
+      const method = options?.method?.toUpperCase() || "GET";
+      if (method !== "GET") {
+        console.log(`[workflow-runner] fetchApi ${method} ${route}`);
+      }
+
       const resp = await originalFetchApi(route, options, ...rest);
 
-      if (route.includes("/userdata/") && route.includes("workflows/")) {
-        const method = options?.method?.toUpperCase() || "GET";
-        if (method === "POST" || method === "PUT") {
-          console.log("[workflow-runner] Workflow save detected, exporting .api.json");
-          exportApiFormat(originalGraphToPrompt);
-        }
+      if (isWorkflowSave(route, method)) {
+        console.log(`[workflow-runner] Workflow save detected: ${method} ${route}`);
+        exportApiFormat(originalGraphToPrompt);
       }
 
       return resp;
