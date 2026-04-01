@@ -75,8 +75,6 @@ try:
             outputs: list[str] | null - output slugs to prune to (null = full)
             schema_inputs: list[dict] | null - explicit [{node_id, slug}]
         """
-        import aiohttp as aiohttp_client
-
         data = await request.json()
         workflow_name = data.get("workflow")
         input_data = data.get("inputs", {})
@@ -113,21 +111,25 @@ try:
             if output_ids:
                 workflow = prune_to_outputs(workflow, output_ids)
 
-        prompt_payload = {
-            "prompt": workflow,
-            "extra_data": {"extra_pnginfo": {"workflow": {"nodes": []}}},
-        }
+        import uuid
+        import execution
 
-        async with aiohttp_client.ClientSession() as session:
-            async with session.post(
-                "http://127.0.0.1:8188/prompt",
-                json=prompt_payload,
-            ) as resp:
-                result = await resp.json()
+        prompt_id = str(uuid.uuid4())
+        extra_data = {"extra_pnginfo": {"workflow": {"nodes": []}}}
+        valid = execution.validate_prompt(workflow)
+        if not valid[0]:
+            return web.json_response(
+                {"error": "Prompt validation failed", "details": valid[1]},
+                status=400,
+            )
+
+        PromptServer.instance.prompt_queue.put(
+            (0, prompt_id, workflow, extra_data, valid[2])
+        )
 
         return web.json_response({
             "status": "ok",
-            "prompt_id": result.get("prompt_id"),
+            "prompt_id": prompt_id,
             "nodes_submitted": len(workflow),
         })
 
