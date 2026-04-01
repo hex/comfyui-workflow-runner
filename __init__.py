@@ -2,7 +2,10 @@
 # ABOUTME: and running pre-expanded .api.json workflows.
 
 import json
+import logging
 import os
+
+log = logging.getLogger("workflow-runner")
 
 try:
     from .workflow_runner import (
@@ -44,6 +47,7 @@ try:
         api_workflow = data.get("api_workflow")
 
         if not name or not api_workflow:
+            log.warning("save-api: missing 'name' or 'api_workflow'")
             return web.json_response(
                 {"error": "Missing 'name' or 'api_workflow'"},
                 status=400,
@@ -58,6 +62,8 @@ try:
 
         with open(api_path, "w") as f:
             json.dump(api_workflow, f, indent=2)
+
+        log.info("Saved %s (%d nodes)", api_path, len(api_workflow))
 
         return web.json_response({
             "status": "ok",
@@ -82,6 +88,7 @@ try:
         schema_inputs = data.get("schema_inputs")
 
         if not workflow_name:
+            log.warning("run: missing 'workflow'")
             return web.json_response(
                 {"error": "Missing 'workflow'"}, status=400,
             )
@@ -126,6 +133,8 @@ try:
         PromptServer.instance.prompt_queue.put(
             (0, prompt_id, workflow, extra_data, valid[2])
         )
+
+        log.info("Queued %s (%d nodes) as %s", stem, len(workflow), prompt_id)
 
         return web.json_response({
             "status": "ok",
