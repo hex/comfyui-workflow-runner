@@ -1,7 +1,15 @@
 [project]
 name = "comfyui-workflow-runner"
-version = "0.1.0"
-description = "ComfyUI extension for auto-exporting and running API-format workflows"
+version = "2026.4.0"
+description = "Auto-exports expanded API-format workflows on save and provides routes to run them with injected inputs"
+authors = [{ name = "hex" }]
+
+[project.urls]
+Repository = "https://github.com/hex/comfyui-workflow-runner"
+
+[tool.comfy]
+PublisherId = "hex"
+DisplayName = "Workflow Runner"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
