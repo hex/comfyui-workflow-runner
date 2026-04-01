@@ -1,0 +1,8 @@
+[project]
+name = "comfyui-workflow-runner"
+version = "0.1.0"
+description = "ComfyUI extension for auto-exporting and running API-format workflows"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

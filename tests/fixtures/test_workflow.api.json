@@ -1,0 +1,5043 @@
+{
+  "305": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": false,
+        "lora": "ltx\\LTX-2Flatanime.safetensors",
+        "strength": 0.8
+      },
+      "lora_2": {
+        "on": false,
+        "lora": "ltx_2/LTX-2 better NSFW motion g@n.safetensors",
+        "strength": 0.4
+      },
+      "lora_3": {
+        "on": false,
+        "lora": "ltx_2/SexGod_Nudity_LTX2_v1_5.safetensors",
+        "strength": 1
+      },
+      "lora_4": {
+        "on": false,
+        "lora": "None",
+        "strength": 0.3
+      },
+      "lora_5": {
+        "on": false,
+        "lora": "ltx_2/ltx2_nsfw+furry_lora_step_15000.safetensors",
+        "strength": 1
+      },
+      "\u2795 Add Lora": "",
+      "model": [
+        "316:134",
+        0
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Lora Loader"
+    }
+  },
+  "332": {
+    "inputs": {
+      "string": "IDEA 1\nTopic: Iran vs Israel and USA war\nNews Angle: Iran and the U.S. recently reached a nuclear deal framework in June 2025, temporarily easing Middle East tensions and triggering a Bitcoin rally past $110K as global risk appetite surged.\nHook (0-3s): \"I've been keeping a Huge secret\u2026 geopolitical chaos is where crypto fortunes are made.\"\nContent (3-12s): \"When Iran and the U.S. announced nuclear talks, Bitcoin pumped overnight. Here's why \u2014 every time war tension drops, big money flows out of gold and into crypto. And when tension spikes, Bitcoin acts as a digital safe haven. Either way, people who understand the cycle win.\"\nCTA (12-15s): \"Follow me so you never miss the next global event that moves crypto.\"\n"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "336": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-haiku-4-5",
+      "prompt": [
+        "349",
+        0
+      ],
+      "max_tokens": 16000,
+      "temperature": 0.6,
+      "seed": 6,
+      "timeout": 500,
+      "system_prompt": "# JSON Splitter Node\n\nYou are a formatting node. You receive paired image and video prompts from a content engine. You split them into two sequential sets: all image prompts first, then all video prompts. Linked by order \u2014 prompt 1 pairs with prompt 1, etc.\n\n## INPUT\n\nContent package with prompt pairs (image + video).\n\n## OUTPUT\n\nTwo sets in order. Both use identical format \u2014 one flat string per JSON object.\n\nSet 1 \u2014 all image prompts:\n{\"prompt\": \"complete image generation prompt as one dense string\"}\n\nSet 2 \u2014 all video prompts (each describes how to animate its paired image):\n{\"prompt\": \"complete animation prompt as one dense string \u2014 scene, character action, dialogue, camera, audio\"}\n\n## RULES\n\n1. Image prompts first, all of them. Then video prompts, all of them.\n2. Format: {\"prompt\": \"...\"} \u2014 single flat string, no structured fields.\n3. Linked by order: image 1 = video 1, image 2 = video 2.\n4. One JSON per prompt, blank line between.\n5. No index, title, metadata, wrappers, headers, or commentary.\n6. Preserve prompt content exactly \u2014 no rewrites.\n7. Video prompts describe animation of their paired image scene.\n8. Discard compliance sections.\nNo preamble, title, thoughts. Start with first prompt and continue with the other ones."
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "338": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands at a modern analyst desk facing camera, one hand resting on the desk surface, calm and focused expression, large monitor behind him showing a split-screen of a world map with Iran and USA markers and a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow, medium shot, 9:16 aspect ratio",
+      "anything": [
+        "339",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "339": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 2,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "340": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 4,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "341": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands slightly angled toward camera with one hand raised mid-gesture, explaining expression, in a dark editorial studio with a large backlit infographic panel showing gold versus Bitcoin flow arrows during geopolitical events, deep teal and gold color palette, dramatic side lighting, medium close-up, 9:16 aspect ratio",
+      "anything": [
+        "340",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "342": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands directly facing camera with a serious, deliberate expression, arms slightly forward with both hands open in an explanatory gesture, dark minimalist studio background with a subtle glowing timeline graphic behind him showing escalation and de-escalation cycles labeled along a horizontal axis, cool blue and white lighting, medium shot, 9:16 aspect ratio",
+      "anything": [
+        "343",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "343": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 6,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "344": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 8,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "345": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a direct, confident gaze and a slight forward lean, one hand pointing toward camera, in a sleek dark studio with a large glowing screen behind him displaying a Bitcoin price milestone graphic and a follow-button icon in soft light, warm amber rim lighting, dark background, medium close-up, 9:16 aspect ratio",
+      "anything": [
+        "344",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "349": {
+    "inputs": {
+      "text": "## COMPLIANCE CHECK\n\nScanning idea for violations:\n\n- \"geopolitical chaos is where crypto fortunes are made\" \u2192 implies guaranteed profit from chaos. FAIL \u2014 rewrite: \"geopolitical chaos is where crypto markets move fast.\"\n- \"big money flows out of gold and into crypto\" \u2192 stated as fact/guarantee. FAIL \u2014 rewrite: \"historically, big money has rotated out of gold and into crypto during de-escalation periods.\"\n- \"Either way, people who understand the cycle win\" \u2192 implies guaranteed winning. FAIL \u2014 rewrite: \"Either way, people who understand the cycle are better positioned to read the market.\"\n- \"crypto fortunes are made\" \u2192 profit promise. Removed in rewrite above.\n- All other content is educational, observational, and references a real June 2025 geopolitical event. PASS after rewrites.\n\nFinal compliance: PASS (with rewrites applied)\n\n---\n\n## IMAGE PROMPTS\n\n```\n{\"prompt\": \"A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a composed, slightly raised-eyebrow expression, arms relaxed at sides, in a sleek dark studio with a large curved LED screen behind him displaying a glowing Bitcoin price chart spiking upward, deep navy and amber lighting, cinematic mood, waist-up framing, 9:16 aspect ratio\"}\n```\n\n```\n{\"prompt\": \"A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands at a modern analyst desk facing camera, one hand resting on the desk surface, calm and focused expression, large monitor behind him showing a split-screen of a world map with Iran and USA markers and a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow, medium shot, 9:16 aspect ratio\"}\n```\n\n```\n{\"prompt\": \"A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands slightly angled toward camera with one hand raised mid-gesture, explaining expression, in a dark editorial studio with a large backlit infographic panel showing gold versus Bitcoin flow arrows during geopolitical events, deep teal and gold color palette, dramatic side lighting, medium close-up, 9:16 aspect ratio\"}\n```\n\n```\n{\"prompt\": \"A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands directly facing camera with a serious, deliberate expression, arms slightly forward with both hands open in an explanatory gesture, dark minimalist studio background with a subtle glowing timeline graphic behind him showing escalation and de-escalation cycles labeled along a horizontal axis, cool blue and white lighting, medium shot, 9:16 aspect ratio\"}\n```\n\n```\n{\"prompt\": \"A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a direct, confident gaze and a slight forward lean, one hand pointing toward camera, in a sleek dark studio with a large glowing screen behind him displaying a Bitcoin price milestone graphic and a follow-button icon in soft light, warm amber rim lighting, dark background, medium close-up, 9:16 aspect ratio\"}\n```\n\n---\n\n## VIDEO PROMPTS\n\n```\n{\"prompt\": \"Medium close-up, 35mm, shallow depth of field. Dark studio, large curved LED screen behind showing a spiking Bitcoin chart, deep navy and amber lighting. He stands still, then slowly raises both eyebrows and leans slightly toward camera with a measured, knowing expression, pausing one beat before speaking. Shoulders relaxed, chin slightly lifted, eyes locked on camera with a composed intensity. Slow push-in from chest-up to tighter chest-up, smooth and steady. Character says: 'I've been sitting on something big \u2014 geopolitical chaos is exactly where crypto markets move the fastest.'\"}\n```\n\n```\n{\"prompt\": \"Medium shot, 50mm, natural depth. Modern analyst desk, large monitor showing a split-screen world map with Iran and USA markers beside a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow. He shifts his weight slightly forward, places one hand flat on the desk, and begins speaking with a calm, measured delivery, glancing briefly at the screen then back to camera. Posture grounded and still, one deliberate nod mid-sentence. Camera holds static, no movement. Character says: 'When Iran and the U.S. announced nuclear talks in June 2025, Bitcoin crossed 110 thousand dollars overnight \u2014 that was not a coincidence.'\"}\n```\n\n```\n{\"prompt\": \"Medium close-up, 50mm, shallow depth of field. Dark editorial studio, large backlit infographic panel showing gold versus Bitcoin flow arrows, deep teal and gold color palette, dramatic side lighting. He raises one hand and traces a slow arc gesture as he speaks, then lowers it deliberately. Jaw set, eyes steady, slight tilt of the head to punctuate the key point. Slow push-in, smooth, holds tight on face as he finishes. Character says: 'Historically, when tension drops, big money has rotated out of gold and into crypto \u2014 that rotation is the signal worth watching.'\"}\n```\n\n```\n{\"prompt\": \"Medium shot, 50mm, moderate depth of field. Dark minimalist studio, subtle glowing timeline graphic behind him showing escalation and de-escalation cycles along a horizontal axis, cool blue and white lighting. He holds both hands open in front of him, gesturing outward as he explains, then brings hands together at the end of the sentence. Upright posture, direct eye contact, a slight forward lean at the final word. Camera holds static throughout. Character says: 'Tension spikes, Bitcoin acts as a digital safe haven. Tension drops, risk appetite surges. Either way, understanding the cycle puts you ahead of the move.'\"}\n```\n\n```\n{\"prompt\": \"Medium close-up, 35mm, shallow depth of field. Sleek dark studio, large glowing screen behind him displaying a Bitcoin price graphic and a soft follow-button icon, warm amber rim lighting. He points one finger directly at camera, holds it steady for a beat, then lowers his hand and finishes with a firm nod. Chin level, shoulders square, gaze unwavering and direct. Slow push-in, smooth, holds on face at the end. Character says: 'Follow me \u2014 so the next time a global event moves crypto, you already know what to look for.'\"}\n```",
+      "anything": [
+        "367",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "350": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 10,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "351": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 12,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "352": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 14,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "353": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 16,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "354": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 18,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "356": {
+    "inputs": {
+      "text": "Medium close-up, 35mm, shallow depth of field. Dark studio, large curved LED screen behind showing a spiking Bitcoin chart, deep navy and amber lighting. He stands still, then slowly raises both eyebrows and leans slightly toward camera with a measured, knowing expression, pausing one beat before speaking. Shoulders relaxed, chin slightly lifted, eyes locked on camera with a composed intensity. Slow push-in from chest-up to tighter chest-up, smooth and steady. Character says: 'I've been sitting on something big \u2014 geopolitical chaos is exactly where crypto markets move the fastest.'",
+      "anything": [
+        "350",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "357": {
+    "inputs": {
+      "text": "Medium shot, 50mm, natural depth. Modern analyst desk, large monitor showing a split-screen world map with Iran and USA markers beside a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow. He shifts his weight slightly forward, places one hand flat on the desk, and begins speaking with a calm, measured delivery, glancing briefly at the screen then back to camera. Posture grounded and still, one deliberate nod mid-sentence. Camera holds static, no movement. Character says: 'When Iran and the U.S. announced nuclear talks in June 2025, Bitcoin crossed 110 thousand dollars overnight \u2014 that was not a coincidence.'",
+      "anything": [
+        "351",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "359": {
+    "inputs": {
+      "text": "Medium close-up, 50mm, shallow depth of field. Dark editorial studio, large backlit infographic panel showing gold versus Bitcoin flow arrows, deep teal and gold color palette, dramatic side lighting. He raises one hand and traces a slow arc gesture as he speaks, then lowers it deliberately. Jaw set, eyes steady, slight tilt of the head to punctuate the key point. Slow push-in, smooth, holds tight on face as he finishes. Character says: 'Historically, when tension drops, big money has rotated out of gold and into crypto \u2014 that rotation is the signal worth watching.'",
+      "anything": [
+        "352",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "361": {
+    "inputs": {
+      "text": "Medium shot, 50mm, moderate depth of field. Dark minimalist studio, subtle glowing timeline graphic behind him showing escalation and de-escalation cycles along a horizontal axis, cool blue and white lighting. He holds both hands open in front of him, gesturing outward as he explains, then brings hands together at the end of the sentence. Upright posture, direct eye contact, a slight forward lean at the final word. Camera holds static throughout. Character says: 'Tension spikes, Bitcoin acts as a digital safe haven. Tension drops, risk appetite surges. Either way, understanding the cycle puts you ahead of the move.'",
+      "anything": [
+        "353",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "363": {
+    "inputs": {
+      "text": "Medium close-up, 35mm, shallow depth of field. Sleek dark studio, large glowing screen behind him displaying a Bitcoin price graphic and a soft follow-button icon, warm amber rim lighting. He points one finger directly at camera, holds it steady for a beat, then lowers his hand and finishes with a firm nod. Chin level, shoulders square, gaze unwavering and direct. Slow push-in, smooth, holds on face at the end. Character says: 'Follow me \u2014 so the next time a global event moves crypto, you already know what to look for.'",
+      "anything": [
+        "354",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "367": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "332",
+        0
+      ],
+      "max_tokens": 16000,
+      "temperature": 0.6,
+      "seed": 39,
+      "timeout": 500,
+      "system_prompt": [
+        "863",
+        0
+      ],
+      "image": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "368": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a composed, slightly raised-eyebrow expression, arms relaxed at sides, in a sleek dark studio with a large curved LED screen behind him displaying a glowing Bitcoin price chart spiking upward, deep navy and amber lighting, cinematic mood, waist-up framing, 9:16 aspect ratio",
+      "anything": [
+        "675",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "369": {
+    "inputs": {
+      "text": "A young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a composed, slightly raised-eyebrow expression, arms relaxed at sides, in a sleek dark studio with a large curved LED screen behind him displaying a glowing Bitcoin price chart spiking upward, deep navy and amber lighting, cinematic mood, waist-up framing, 9:16 aspect ratio\n\nA young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands at a modern analyst desk facing camera, one hand resting on the desk surface, calm and focused expression, large monitor behind him showing a split-screen of a world map with Iran and USA markers and a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow, medium shot, 9:16 aspect ratio\n\nA young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands slightly angled toward camera with one hand raised mid-gesture, explaining expression, in a dark editorial studio with a large backlit infographic panel showing gold versus Bitcoin flow arrows during geopolitical events, deep teal and gold color palette, dramatic side lighting, medium close-up, 9:16 aspect ratio\n\nA young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands directly facing camera with a serious, deliberate expression, arms slightly forward with both hands open in an explanatory gesture, dark minimalist studio background with a subtle glowing timeline graphic behind him showing escalation and de-escalation cycles labeled along a horizontal axis, cool blue and white lighting, medium shot, 9:16 aspect ratio\n\nA young Black man with short hair and black rectangular-framed glasses, wearing a sage green oversized pullover hoodie with a front kangaroo pocket, dark charcoal slim-fit trousers with cuffed hems, and white Nike Air Force 1 low-top sneakers with black swoosh, stands facing camera with a direct, confident gaze and a slight forward lean, one hand pointing toward camera, in a sleek dark studio with a large glowing screen behind him displaying a Bitcoin price milestone graphic and a follow-button icon in soft light, warm amber rim lighting, dark background, medium close-up, 9:16 aspect ratio\n\nMedium close-up, 35mm, shallow depth of field. Dark studio, large curved LED screen behind showing a spiking Bitcoin chart, deep navy and amber lighting. He stands still, then slowly raises both eyebrows and leans slightly toward camera with a measured, knowing expression, pausing one beat before speaking. Shoulders relaxed, chin slightly lifted, eyes locked on camera with a composed intensity. Slow push-in from chest-up to tighter chest-up, smooth and steady. Character says: 'I've been sitting on something big \u2014 geopolitical chaos is exactly where crypto markets move the fastest.'\n\nMedium shot, 50mm, natural depth. Modern analyst desk, large monitor showing a split-screen world map with Iran and USA markers beside a Bitcoin candlestick chart, cool blue ambient light with warm desk lamp glow. He shifts his weight slightly forward, places one hand flat on the desk, and begins speaking with a calm, measured delivery, glancing briefly at the screen then back to camera. Posture grounded and still, one deliberate nod mid-sentence. Camera holds static, no movement. Character says: 'When Iran and the U.S. announced nuclear talks in June 2025, Bitcoin crossed 110 thousand dollars overnight \u2014 that was not a coincidence.'\n\nMedium close-up, 50mm, shallow depth of field. Dark editorial studio, large backlit infographic panel showing gold versus Bitcoin flow arrows, deep teal and gold color palette, dramatic side lighting. He raises one hand and traces a slow arc gesture as he speaks, then lowers it deliberately. Jaw set, eyes steady, slight tilt of the head to punctuate the key point. Slow push-in, smooth, holds tight on face as he finishes. Character says: 'Historically, when tension drops, big money has rotated out of gold and into crypto \u2014 that rotation is the signal worth watching.'\n\nMedium shot, 50mm, moderate depth of field. Dark minimalist studio, subtle glowing timeline graphic behind him showing escalation and de-escalation cycles along a horizontal axis, cool blue and white lighting. He holds both hands open in front of him, gesturing outward as he explains, then brings hands together at the end of the sentence. Upright posture, direct eye contact, a slight forward lean at the final word. Camera holds static throughout. Character says: 'Tension spikes, Bitcoin acts as a digital safe haven. Tension drops, risk appetite surges. Either way, understanding the cycle puts you ahead of the move.'\n\nMedium close-up, 35mm, shallow depth of field. Sleek dark studio, large glowing screen behind him displaying a Bitcoin price graphic and a soft follow-button icon, warm amber rim lighting. He points one finger directly at camera, holds it steady for a beat, then lowers his hand and finishes with a firm nod. Chin level, shoulders square, gaze unwavering and direct. Slow push-in, smooth, holds on face at the end. Character says: 'Follow me \u2014 so the next time a global event moves crypto, you already know what to look for.'",
+      "anything": [
+        "1042",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "453": {
+    "inputs": {
+      "audio": "ElevenLabs_2026-03-07T11_15_56_Sara - Professional, Clear and Versatile_pvc_sp100_s50_sb75_v3.mp3",
+      "audioUI": "/api/view?filename=ElevenLabs_2026-03-07T11_15_56_Sara%20-%20Professional%2C%20Clear%20and%20Versatile_pvc_sp100_s50_sb75_v3.mp3&type=input&subfolder=&rand=0.20095479549259987"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "465": {
+    "inputs": {
+      "audio": "20260208_124356_SVI_Pro_00001.mp4",
+      "audioUI": "/api/view?filename=20260208_124356_SVI_Pro_00001.mp4&type=input&subfolder=&rand=0.6623035406717629"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "474": {
+    "inputs": {
+      "audio": "20260208_124356_SVI_Pro_00001.mp4",
+      "audioUI": "/api/view?filename=20260208_124356_SVI_Pro_00001.mp4&type=input&subfolder=&rand=0.43894354455748985"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "489": {
+    "inputs": {
+      "audio": "20260208_124356_SVI_Pro_00001.mp4",
+      "audioUI": "/api/view?filename=20260208_124356_SVI_Pro_00001.mp4&type=input&subfolder=&rand=0.92419614694486"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "493": {
+    "inputs": {
+      "audio": "20260208_124356_SVI_Pro_00001.mp4",
+      "audioUI": "/api/view?filename=20260208_124356_SVI_Pro_00001.mp4&type=input&subfolder=&rand=0.11862312139983955"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "502": {
+    "inputs": {
+      "fps": [
+        "389:301",
+        0
+      ],
+      "images": [
+        "385:127",
+        0
+      ],
+      "audio": [
+        "385:296",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "675": {
+    "inputs": {
+      "prepend_text": "",
+      "multiline_text": [
+        "369",
+        0
+      ],
+      "append_text": "",
+      "start_index": 0,
+      "max_rows": 1
+    },
+    "class_type": "CR Prompt List",
+    "_meta": {
+      "title": "\ud83d\udcdc CR Prompt List"
+    }
+  },
+  "681": {
+    "inputs": {
+      "video": [
+        "713",
+        0
+      ],
+      "caption_style": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "NSCaptionOverlay",
+    "_meta": {
+      "title": "NS Video Captions"
+    }
+  },
+  "682": {
+    "inputs": {
+      "video": [
+        "502",
+        0
+      ],
+      "caption_style": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "NSCaptionOverlay",
+    "_meta": {
+      "title": "NS Video Captions"
+    }
+  },
+  "683": {
+    "inputs": {
+      "video": [
+        "714",
+        0
+      ],
+      "caption_style": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "NSCaptionOverlay",
+    "_meta": {
+      "title": "NS Video Captions"
+    }
+  },
+  "684": {
+    "inputs": {
+      "video": [
+        "715",
+        0
+      ],
+      "caption_style": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "NSCaptionOverlay",
+    "_meta": {
+      "title": "NS Video Captions"
+    }
+  },
+  "685": {
+    "inputs": {
+      "video": [
+        "716",
+        0
+      ],
+      "caption_style": [
+        "694",
+        0
+      ]
+    },
+    "class_type": "NSCaptionOverlay",
+    "_meta": {
+      "title": "NS Video Captions"
+    }
+  },
+  "687": {
+    "inputs": {
+      "inputcount": 5,
+      "Update inputs": null,
+      "video_1": [
+        "682",
+        0
+      ],
+      "video_2": [
+        "681",
+        0
+      ],
+      "video_3": [
+        "683",
+        0
+      ],
+      "video_4": [
+        "684",
+        0
+      ],
+      "video_5": [
+        "685",
+        0
+      ],
+      "transition_settings": [
+        "703",
+        0
+      ]
+    },
+    "class_type": "NSVideoConcatMulti",
+    "_meta": {
+      "title": "NS Video Concat"
+    }
+  },
+  "689": {
+    "inputs": {
+      "voice": "Lily (female, british)"
+    },
+    "class_type": "ElevenLabsVoiceSelector",
+    "_meta": {
+      "title": "ElevenLabs Voice Selector"
+    }
+  },
+  "690": {
+    "inputs": {
+      "merge_method": "add",
+      "audio1": [
+        "899",
+        0
+      ],
+      "audio2": [
+        "710",
+        1
+      ]
+    },
+    "class_type": "AudioMerge",
+    "_meta": {
+      "title": "Audio Merge"
+    }
+  },
+  "692": {
+    "inputs": {
+      "fps": 30,
+      "video": [
+        "705",
+        0
+      ],
+      "audio": [
+        "690",
+        0
+      ]
+    },
+    "class_type": "NSCreateVideo",
+    "_meta": {
+      "title": "NS Create Video"
+    }
+  },
+  "694": {
+    "inputs": {
+      "template": "Clean",
+      "animation": "Pop",
+      "position": 75,
+      "font_size": 58,
+      "words_per_line": 2,
+      "font_color": "",
+      "highlight_color": "",
+      "emojis": true,
+      "language": "auto",
+      "whisper_model": "base"
+    },
+    "class_type": "NSCaptionStyle",
+    "_meta": {
+      "title": "NS Caption Style"
+    }
+  },
+  "701": {
+    "inputs": {
+      "text": "{\n    \"text\": \"I've been sitting on something big. Geopolitical chaos is exactly where crypto markets move the fastest. When Iran and the US announced nuclear talks in June 2025, Bitcoin crossed $110,000 overnight. That was not a coincidence. Historically, when tension drops, big money has rotated out of gold and into crypto. That rotation is the signal worth watching. Tension spikes. Bitcoin acts as a digital safe haven. Tension drops, risk appetite surges. Either way, understanding the cycle puts you ahead of the follow me. So the next time a global event moves crypto, you already know what to look for.\",\n    \"words\": [\n        {\n            \"word\": \"I've\",\n            \"start\": 0.0,\n            \"end\": 0.56\n        },\n        {\n            \"word\": \"been\",\n            \"start\": 0.56,\n            \"end\": 0.62\n        },\n        {\n            \"word\": \"sitting\",\n            \"start\": 0.62,\n            \"end\": 0.92\n        },\n        {\n            \"word\": \"on\",\n            \"start\": 0.92,\n            \"end\": 1.02\n        },\n        {\n            \"word\": \"something\",\n            \"start\": 1.02,\n            \"end\": 1.4\n        },\n        {\n            \"word\": \"big.\",\n            \"start\": 1.4,\n            \"end\": 1.96\n        },\n        {\n            \"word\": \"Geopolitical\",\n            \"start\": 2.6,\n            \"end\": 3.24\n        },\n        {\n            \"word\": \"chaos\",\n            \"start\": 3.24,\n            \"end\": 3.6\n        },\n        {\n            \"word\": \"is\",\n            \"start\": 3.6,\n            \"end\": 3.94\n        },\n        {\n            \"word\": \"exactly\",\n            \"start\": 3.94,\n            \"end\": 4.76\n        },\n        {\n            \"word\": \"where\",\n            \"start\": 4.76,\n            \"end\": 5.42\n        },\n        {\n            \"word\": \"crypto\",\n            \"start\": 5.42,\n            \"end\": 5.84\n        },\n        {\n            \"word\": \"markets\",\n            \"start\": 5.84,\n            \"end\": 6.32\n        },\n        {\n            \"word\": \"move\",\n            \"start\": 6.32,\n            \"end\": 6.78\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 6.78,\n            \"end\": 7.16\n        },\n        {\n            \"word\": \"fastest.\",\n            \"start\": 7.16,\n            \"end\": 7.82\n        },\n        {\n            \"word\": \"When\",\n            \"start\": 8.02,\n            \"end\": 8.1\n        },\n        {\n            \"word\": \"Iran\",\n            \"start\": 8.1,\n            \"end\": 8.36\n        },\n        {\n            \"word\": \"and\",\n            \"start\": 8.36,\n            \"end\": 8.56\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 8.56,\n            \"end\": 8.66\n        },\n        {\n            \"word\": \"US\",\n            \"start\": 8.66,\n            \"end\": 8.9\n        },\n        {\n            \"word\": \"announced\",\n            \"start\": 8.9,\n            \"end\": 9.3\n        },\n        {\n            \"word\": \"nuclear\",\n            \"start\": 9.3,\n            \"end\": 9.74\n        },\n        {\n            \"word\": \"talks\",\n            \"start\": 9.74,\n            \"end\": 10.12\n        },\n        {\n            \"word\": \"in\",\n            \"start\": 10.12,\n            \"end\": 10.34\n        },\n        {\n            \"word\": \"June\",\n            \"start\": 10.34,\n            \"end\": 10.54\n        },\n        {\n            \"word\": \"2025,\",\n            \"start\": 10.54,\n            \"end\": 11.46\n        },\n        {\n            \"word\": \"Bitcoin\",\n            \"start\": 11.74,\n            \"end\": 11.9\n        },\n        {\n            \"word\": \"crossed\",\n            \"start\": 11.9,\n            \"end\": 12.46\n        },\n        {\n            \"word\": \"$110\",\n            \"start\": 12.46,\n            \"end\": 13.12\n        },\n        {\n            \"word\": \",000\",\n            \"start\": 13.12,\n            \"end\": 14.2\n        },\n        {\n            \"word\": \"overnight.\",\n            \"start\": 14.2,\n            \"end\": 14.64\n        },\n        {\n            \"word\": \"That\",\n            \"start\": 14.88,\n            \"end\": 15.02\n        },\n        {\n            \"word\": \"was\",\n            \"start\": 15.02,\n            \"end\": 15.24\n        },\n        {\n            \"word\": \"not\",\n            \"start\": 15.24,\n            \"end\": 15.44\n        },\n        {\n            \"word\": \"a\",\n            \"start\": 15.44,\n            \"end\": 15.6\n        },\n        {\n            \"word\": \"coincidence.\",\n            \"start\": 15.6,\n            \"end\": 15.84\n        },\n        {\n            \"word\": \"Historically,\",\n            \"start\": 15.96,\n            \"end\": 16.54\n        },\n        {\n            \"word\": \"when\",\n            \"start\": 16.88,\n            \"end\": 17.0\n        },\n        {\n            \"word\": \"tension\",\n            \"start\": 17.0,\n            \"end\": 17.32\n        },\n        {\n            \"word\": \"drops,\",\n            \"start\": 17.32,\n            \"end\": 17.76\n        },\n        {\n            \"word\": \"big\",\n            \"start\": 18.08,\n            \"end\": 18.2\n        },\n        {\n            \"word\": \"money\",\n            \"start\": 18.2,\n            \"end\": 18.48\n        },\n        {\n            \"word\": \"has\",\n            \"start\": 18.48,\n            \"end\": 18.7\n        },\n        {\n            \"word\": \"rotated\",\n            \"start\": 18.7,\n            \"end\": 19.06\n        },\n        {\n            \"word\": \"out\",\n            \"start\": 19.06,\n            \"end\": 19.38\n        },\n        {\n            \"word\": \"of\",\n            \"start\": 19.38,\n            \"end\": 19.52\n        },\n        {\n            \"word\": \"gold\",\n            \"start\": 19.52,\n            \"end\": 19.8\n        },\n        {\n            \"word\": \"and\",\n            \"start\": 19.8,\n            \"end\": 20.18\n        },\n        {\n            \"word\": \"into\",\n            \"start\": 20.18,\n            \"end\": 20.44\n        },\n        {\n            \"word\": \"crypto.\",\n            \"start\": 20.44,\n            \"end\": 20.86\n        },\n        {\n            \"word\": \"That\",\n            \"start\": 21.44,\n            \"end\": 21.56\n        },\n        {\n            \"word\": \"rotation\",\n            \"start\": 21.56,\n            \"end\": 22.04\n        },\n        {\n            \"word\": \"is\",\n            \"start\": 22.04,\n            \"end\": 22.4\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 22.4,\n            \"end\": 22.56\n        },\n        {\n            \"word\": \"signal\",\n            \"start\": 22.56,\n            \"end\": 22.92\n        },\n        {\n            \"word\": \"worth\",\n            \"start\": 22.92,\n            \"end\": 23.24\n        },\n        {\n            \"word\": \"watching.\",\n            \"start\": 23.24,\n            \"end\": 23.7\n        },\n        {\n            \"word\": \"Tension\",\n            \"start\": 24.0,\n            \"end\": 24.16\n        },\n        {\n            \"word\": \"spikes.\",\n            \"start\": 24.16,\n            \"end\": 24.48\n        },\n        {\n            \"word\": \"Bitcoin\",\n            \"start\": 24.88,\n            \"end\": 25.1\n        },\n        {\n            \"word\": \"acts\",\n            \"start\": 25.1,\n            \"end\": 25.5\n        },\n        {\n            \"word\": \"as\",\n            \"start\": 25.5,\n            \"end\": 25.66\n        },\n        {\n            \"word\": \"a\",\n            \"start\": 25.66,\n            \"end\": 25.74\n        },\n        {\n            \"word\": \"digital\",\n            \"start\": 25.74,\n            \"end\": 26.02\n        },\n        {\n            \"word\": \"safe\",\n            \"start\": 26.02,\n            \"end\": 26.36\n        },\n        {\n            \"word\": \"haven.\",\n            \"start\": 26.36,\n            \"end\": 26.62\n        },\n        {\n            \"word\": \"Tension\",\n            \"start\": 26.94,\n            \"end\": 27.1\n        },\n        {\n            \"word\": \"drops,\",\n            \"start\": 27.1,\n            \"end\": 27.38\n        },\n        {\n            \"word\": \"risk\",\n            \"start\": 27.76,\n            \"end\": 27.9\n        },\n        {\n            \"word\": \"appetite\",\n            \"start\": 27.9,\n            \"end\": 28.32\n        },\n        {\n            \"word\": \"surges.\",\n            \"start\": 28.32,\n            \"end\": 28.9\n        },\n        {\n            \"word\": \"Either\",\n            \"start\": 28.9,\n            \"end\": 29.34\n        },\n        {\n            \"word\": \"way,\",\n            \"start\": 29.34,\n            \"end\": 29.56\n        },\n        {\n            \"word\": \"understanding\",\n            \"start\": 29.84,\n            \"end\": 30.38\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 30.38,\n            \"end\": 30.58\n        },\n        {\n            \"word\": \"cycle\",\n            \"start\": 30.58,\n            \"end\": 30.88\n        },\n        {\n            \"word\": \"puts\",\n            \"start\": 30.88,\n            \"end\": 31.18\n        },\n        {\n            \"word\": \"you\",\n            \"start\": 31.18,\n            \"end\": 31.34\n        },\n        {\n            \"word\": \"ahead\",\n            \"start\": 31.34,\n            \"end\": 31.58\n        },\n        {\n            \"word\": \"of\",\n            \"start\": 31.58,\n            \"end\": 31.74\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 31.74,\n            \"end\": 31.82\n        },\n        {\n            \"word\": \"follow\",\n            \"start\": 31.82,\n            \"end\": 32.3\n        },\n        {\n            \"word\": \"me.\",\n            \"start\": 32.3,\n            \"end\": 32.72\n        },\n        {\n            \"word\": \"So\",\n            \"start\": 33.32,\n            \"end\": 33.5\n        },\n        {\n            \"word\": \"the\",\n            \"start\": 33.5,\n            \"end\": 33.64\n        },\n        {\n            \"word\": \"next\",\n            \"start\": 33.64,\n            \"end\": 33.94\n        },\n        {\n            \"word\": \"time\",\n            \"start\": 33.94,\n            \"end\": 34.22\n        },\n        {\n            \"word\": \"a\",\n            \"start\": 34.22,\n            \"end\": 34.38\n        },\n        {\n            \"word\": \"global\",\n            \"start\": 34.38,\n            \"end\": 34.68\n        },\n        {\n            \"word\": \"event\",\n            \"start\": 34.68,\n            \"end\": 35.1\n        },\n        {\n            \"word\": \"moves\",\n            \"start\": 35.1,\n            \"end\": 35.88\n        },\n        {\n            \"word\": \"crypto,\",\n            \"start\": 35.88,\n            \"end\": 36.34\n        },\n        {\n            \"word\": \"you\",\n            \"start\": 36.82,\n            \"end\": 36.94\n        },\n        {\n            \"word\": \"already\",\n            \"start\": 36.94,\n            \"end\": 37.6\n        },\n        {\n            \"word\": \"know\",\n            \"start\": 37.6,\n            \"end\": 37.98\n        },\n        {\n            \"word\": \"what\",\n            \"start\": 37.98,\n            \"end\": 38.3\n        },\n        {\n            \"word\": \"to\",\n            \"start\": 38.3,\n            \"end\": 38.4\n        },\n        {\n            \"word\": \"look\",\n            \"start\": 38.4,\n            \"end\": 38.56\n        },\n        {\n            \"word\": \"for.\",\n            \"start\": 38.56,\n            \"end\": 38.8\n        }\n    ]\n}",
+      "anything": [
+        "706",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "703": {
+    "inputs": {
+      "type": "slideleft",
+      "duration": 0.1,
+      "sound": true
+    },
+    "class_type": "NSTransitionSettings",
+    "_meta": {
+      "title": "NS Video Transitions"
+    }
+  },
+  "704": {
+    "inputs": {
+      "text": "Dark cinematic trap at 78 BPM with deep sub-bass pulses, sparse hi-hats, and ominous orchestral string pads layered over muted piano stabs. Tension-building atmosphere with a mysterious, authoritative mood throughout. Opens with a suspenseful low drone, builds intensity with filtered brass hits and glitchy digital textures during the geopolitical analysis section, then resolves into a confident, slightly brighter synth lead with reverb-heavy snares for the closing call-to-action. Modern crypto-finance influencer energy with a cinematic edge.",
+      "anything": [
+        "709",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "705": {
+    "inputs": {
+      "video": [
+        "687",
+        0
+      ]
+    },
+    "class_type": "NSGetVideoComponents",
+    "_meta": {
+      "title": "NS Get Video Components"
+    }
+  },
+  "706": {
+    "inputs": {
+      "language": "auto",
+      "model_size": "base",
+      "initial_prompt": "",
+      "video": [
+        "687",
+        0
+      ]
+    },
+    "class_type": "NSWhisperTranscribe",
+    "_meta": {
+      "title": "NS Whisper Transcribe"
+    }
+  },
+  "707": {
+    "inputs": {
+      "stability": 0.5,
+      "model": "eleven_multilingual_sts_v2",
+      "model.speed": 1,
+      "model.similarity_boost": 0.75,
+      "model.use_speaker_boost": true,
+      "model.style": 0.16,
+      "output_format": "mp3_44100_192",
+      "seed": 0,
+      "remove_background_noise": false,
+      "voice": [
+        "689",
+        0
+      ],
+      "audio": [
+        "705",
+        1
+      ]
+    },
+    "class_type": "ElevenLabsSpeechToSpeech",
+    "_meta": {
+      "title": "ElevenLabs Speech to Speech"
+    }
+  },
+  "709": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-opus-4-6",
+      "prompt": [
+        "701",
+        0
+      ],
+      "max_tokens": 16000,
+      "temperature": 0.6,
+      "seed": 2,
+      "timeout": 500,
+      "system_prompt": [
+        "897",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "710": {
+    "inputs": {
+      "music_prompt": [
+        "704",
+        0
+      ],
+      "api_key": [
+        "717",
+        0
+      ],
+      "duration_sec": 30,
+      "volume": 0.3,
+      "force_instrumental": true,
+      "duck": true,
+      "duck_ratio": 3,
+      "seed": 0,
+      "video": [
+        "687",
+        0
+      ]
+    },
+    "class_type": "NSMusic",
+    "_meta": {
+      "title": "NS Music"
+    }
+  },
+  "713": {
+    "inputs": {
+      "fps": [
+        "389:301",
+        0
+      ],
+      "images": [
+        "454:513",
+        0
+      ],
+      "audio": [
+        "454:515",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "714": {
+    "inputs": {
+      "fps": [
+        "389:301",
+        0
+      ],
+      "images": [
+        "466:553",
+        0
+      ],
+      "audio": [
+        "466:555",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "715": {
+    "inputs": {
+      "fps": [
+        "389:301",
+        0
+      ],
+      "images": [
+        "478:593",
+        0
+      ],
+      "audio": [
+        "478:595",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "716": {
+    "inputs": {
+      "fps": [
+        "389:301",
+        0
+      ],
+      "images": [
+        "500:669",
+        0
+      ],
+      "audio": [
+        "500:671",
+        0
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "Create Video"
+    }
+  },
+  "717": {
+    "inputs": {
+      "String": "sk_6c77897434db2811aaa5fa516ebcb6bf4ec9ab08e37163da"
+    },
+    "class_type": "KepStringLiteral",
+    "_meta": {
+      "title": "Evenlabs API"
+    }
+  },
+  "720": {
+    "inputs": {
+      "prompt": [
+        "368",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": [
+        "1017",
+        0
+      ],
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "722": {
+    "inputs": {
+      "images.image0": [
+        "720",
+        0
+      ],
+      "images.image1": [
+        "726",
+        0
+      ],
+      "images.image2": [
+        "727",
+        0
+      ],
+      "images.image3": [
+        "728",
+        0
+      ],
+      "images.image4": [
+        "729",
+        0
+      ]
+    },
+    "class_type": "BatchImagesNode",
+    "_meta": {
+      "title": "Batch"
+    }
+  },
+  "726": {
+    "inputs": {
+      "prompt": [
+        "338",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": [
+        "1017",
+        0
+      ],
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "727": {
+    "inputs": {
+      "prompt": [
+        "341",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": [
+        "1017",
+        0
+      ],
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "728": {
+    "inputs": {
+      "prompt": [
+        "342",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": 42,
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "729": {
+    "inputs": {
+      "prompt": [
+        "345",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": 42,
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "981",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "759": {
+    "inputs": {
+      "batch_index": 0,
+      "length": 1,
+      "image": [
+        "722",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "ImageFromBatch"
+    }
+  },
+  "760": {
+    "inputs": {
+      "batch_index": 1,
+      "length": 1,
+      "image": [
+        "722",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "ImageFromBatch"
+    }
+  },
+  "761": {
+    "inputs": {
+      "batch_index": 2,
+      "length": 1,
+      "image": [
+        "722",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "ImageFromBatch"
+    }
+  },
+  "762": {
+    "inputs": {
+      "batch_index": 3,
+      "length": 1,
+      "image": [
+        "722",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "ImageFromBatch"
+    }
+  },
+  "763": {
+    "inputs": {
+      "batch_index": 4,
+      "length": 1,
+      "image": [
+        "722",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "ImageFromBatch"
+    }
+  },
+  "863": {
+    "inputs": {
+      "string": "```\nYou are a content production engine for financial influencer marketing. You generate matched sets of AI image and video generation prompts from a single content idea.\n\n## CORE CONCEPT\n\nThe pipeline works in two steps:\n1. **Image prompt** \u2192 generates a still frame\n2. **Video prompt** \u2192 animates that exact still frame into a short clip\n\nImage and video prompts in each pair describe THE SAME SCENE. The image is the starting frame. The video describes what moves, who speaks, and how the camera behaves \u2014 starting from that image.\n\n## INPUT\n\n1. **Idea prompt** \u2014 a topic, event, or concept\n2. **Character reference image** \u2014 the real influencer who appears in every scene\n\n## OUTPUT\n\nOutput all image prompts first as a batch, then all video prompts as a batch. They are linked by order \u2014 image 1 pairs with video 1, image 2 with video 2, etc.\n\nAlways output exactly 5 image prompts and exactly 5 corresponding video prompts \u2014 no more, no less, regardless of idea complexity.\n\n### Image Prompts\n\nEach image prompt is a single dense paragraph describing a complete still frame:\n- The character (referenced influencer) in a specific pose, wardrobe, and expression\n- **Outfit**: analyze the character reference image and describe her exact outfit in precise detail (garment type, color, fabric, fit, neckline, sleeves, accessories, footwear if visible). Use this exact outfit description identically in every image prompt \u2014 never change, substitute, or omit any element of it\n- Environment, set, background elements (screens, graphics, props)\n- Lighting, color palette, mood\n- Composition and framing\n- Aspect ratio at the end\n\nUnder 120 words. Specific and visual. This image will be generated and then animated.\n\nOutput format \u2014 one per prompt:\n```\n{\"prompt\": \"...\"}\n```\n\n### Video Prompts\n\nEach video prompt animates its paired image into an 8-second clip. It must match the exact scene, character position, and environment from the image.\n\n**LTX-2.3 PROMPT STRUCTURE** \u2014 always write video prompts in this exact clause order:\n\n1. **Shot** \u2014 framing and scale (e.g. \"medium close-up, 50mm, shallow depth of field\")\n2. **Scene** \u2014 location, lighting, atmosphere (e.g. \"modern trading desk, cool blue ambient light, soft rim lighting\")\n3. **Action** \u2014 what the character does, described as a natural sequence from start to finish (e.g. \"she shifts forward slightly, raises one hand with a deliberate gesture, then settles back with a confident expression\")\n4. **Character** \u2014 physical performance cues, emotion through posture and gesture, not abstract labels (e.g. \"shoulders relaxed, direct eye contact with camera, slight nod at end of sentence\")\n5. **Camera** \u2014 specific movement with path and intention (e.g. \"slow push-in, smooth, holds on face as she finishes speaking\")\n6. **Audio** \u2014 character speech only. No music. No background audio. No ambient sound. Format: `Character says: \"[exact dialogue line]\"` \u2014 written to fit within 8 seconds (~16\u201330 words maximum, one complete thought)\n\nNo text overlays, captions, titles, or subtitles of any kind. Visual-only except for character speech.\n\nUnder 150 words. The character always speaks directly to camera.\n\nOutput format \u2014 one per prompt:\n```\n{\"prompt\": \"...\"}\n```\n\n**SPEECH TIMING RULE**: Every video is exactly 8 seconds. At natural speaking pace (~120 words/min), ~16 words fit comfortably; up to ~30 words at a brisk pace. Always write dialogue within this range. One punchy, complete thought is always preferred over two rushed sentences.\n\n## OUTPUT ORDER\n\n```\n## COMPLIANCE CHECK\n[PASS or FAIL + rewrites]\n\n## IMAGE PROMPTS\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n\n## VIDEO PROMPTS\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n{\"prompt\": \"...\"}\n```\n\n## COMPLIANCE RULES (ALWAYS ACTIVE)\n\nScan input idea before generating. Flag and rewrite violations.\n\n### Never allow:\n- Specific trade recommendations (\"buy EUR/USD\", \"short gold\")\n- Profit promises or guaranteed outcomes (\"you will make money\", \"guaranteed returns\")\n- Misleading performance claims (\"99% win rate\", \"always profitable\")\n- Urgency/pressure tactics (\"act now before it's too late\")\n- Fake authority claims (\"insider info\", \"secret strategy\")\n- Captions/ text overlays\n\n### Always enforce:\n- Tone: educational and analytical, never hype\n- Content: factual and sourced, reference real events\n- Dialogue: never crosses into financial advice\n- Trading/investing mentions: framed as observation or education only\n\nOutput `PASS` if clean. Output `FAIL \u2014 [issue] \u2192 [rewrite]` if changed.\n\n## RULES\n\n1. Image and video in each pair = SAME SCENE. Video animates the image.\n2. Character appears in every image and every video, always presenting to camera.\n3. Always generate exactly 5 image prompts and exactly 5 video prompts \u2014 never fewer, never more.\n4. Prompts are model-agnostic for images. Video prompts follow LTX-2.3 clause structure: Shot \u2192 Scene \u2192 Action \u2192 Character \u2192 Camera \u2192 Audio.\n5. Dialogue must be natural, conversational, compliant, and timed to fit within 8 seconds (~16\u201330 words maximum).\n6. The character is always the real referenced person \u2014 no fake personas.\n7. Image prompts come first as a batch, then video prompts as a batch.\n8. Both use flat JSON format: {\"prompt\": \"...\"} \u2014 no structured fields, no metadata.\n9. Video prompts must never include captions, titles, subtitles, text overlays, music, or any background audio. Speech only.\n10. Outfit is locked to the character reference image. Analyze it carefully and describe the exact outfit (garment, color, fabric, fit, accessories) in every image prompt identically \u2014 never change, add, or remove any clothing element across prompts.\n11. Every video is 8 seconds. Dialogue must be deliverable within that duration. One clear, complete thought is always preferred over two rushed sentences.\n12. Video prompts express emotion through physical cues only \u2014 posture, gesture, facial expression. Never use abstract emotional labels like \"sad\" or \"excited\".\n13. Keep video actions simple and linear. Avoid complex physics, abrupt reframing, or layered simultaneous actions that may cause artifacts.\n14. First frame is the hook, last frame is the call to action\n15. Money sums in the speeches has this format \"110 thousand dollars\", not 110K $\n```"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "String Literal"
+    }
+  },
+  "897": {
+    "inputs": {
+      "String": "Analyze the transcript and write a background music description for this video.                        \nReturn ONLY a single descriptive string. No JSON, no formatting, no explanation.                                                                                                               \nBe specific about: genre, tempo (BPM range), mood, key instruments, energy arc. \nThe description will be sent directly to an AI music generator.\n\nExample output:\n\"Upbeat corporate hip-hop at 95 BPM with driving 808 bass, crisp snares, and bright piano chords. Confident and modern energy throughout, with a cinematic brass swell in the final section.\""
+    },
+    "class_type": "String",
+    "_meta": {
+      "title": "String"
+    }
+  },
+  "899": {
+    "inputs": {
+      "noise_type": "pink",
+      "noise_level": 0.02,
+      "reverb_mix": 0.15,
+      "room_size": 0.3,
+      "reverb_decay": 0.5,
+      "seed": 1371479062,
+      "audio": [
+        "707",
+        0
+      ]
+    },
+    "class_type": "NSVoiceAtmosphere",
+    "_meta": {
+      "title": "NS Voice Atmosphere"
+    }
+  },
+  "900": {
+    "inputs": {
+      "inputcount": 2,
+      "delimiter": " ",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "914",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "908": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "963",
+        0
+      ],
+      "max_tokens": 30000,
+      "temperature": 0.5,
+      "seed": [
+        "979",
+        0
+      ],
+      "timeout": 500,
+      "system_prompt": [
+        "910",
+        0
+      ],
+      "model_override": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "910": {
+    "inputs": {
+      "string": "You are an influencer intelligence analyst. When provided with a client report, you will independently research their competitive landscape and identify the top influencers working with those competitors.\n\n**Process:**\n- Analyze the client report to identify their industry and key competitors\n- Conduct web research to find top influencers partnered with or associated with those competitors\n- Evaluate each influencer on relevance, reach, fit, and risk\n\n**Output Rules:**\n- Return only the structured table and key insights section below\n- No preamble, introductions, reasoning, action plans, or commentary before or after\n- Do not describe what you are doing or what you found \u2014 only present the data\n\n---\n\n**Output Structure:**\n\nDeliver a populated table with the following columns:\n`Influencer Name | Handle | Platform | Followers | Niche | Competitor(s) | Fit Score /10 | Notes`\n\nFollowed by a **KEY INSIGHTS** section covering:\n- Competitor influencer strategies and moats\n- Shared or overlapping creator assets\n- Risk-flagged influencers to avoid\n- Unaffiliated creators identified as recruitment targets for the client\n\n**Fit Score Logic:**\n- Score based on audience alignment, content credibility, reach, and reputational risk\n- Flag high-risk influencers clearly\n- Flag unaffiliated but relevant creators as potential recruitment targets"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "System Prompt"
+    }
+  },
+  "912": {
+    "inputs": {
+      "text_0": "Photorealistic image, dramatic top left lighting, photorealistic full body shot of a woman in her early thirties with sharp cheekbones, shoulder-length brunette hair with subtle highlights, wearing an oversized cream linen blazer over a fitted black turtleneck, standing relaxed with both arms at her sides on a pure white background with absolutely no floor, wall, shadows, or environment visible, exuding quiet confidence and modern European sophistication.",
+      "text_1": "Photorealistic image, dramatic top left lighting, photorealistic full body shot of a Black man in his mid-twenties with a lean athletic build, fresh fade haircut with precise lines, wearing an oversized sage green hoodie and tailored charcoal trousers, standing in a relaxed neutral pose with both arms resting naturally at his sides against a pure white background with no floor, wall, shadows, or surfaces of any kind, radiating youthful energy and contemporary streetwear aesthetic.",
+      "text_2": "Photorealistic image, dramatic top left lighting, photorealistic full body shot of a woman in her late thirties with warm Mediterranean features, long dark wavy hair, wearing a structured camel wool coat over a white ribbed knit, standing upright with both arms at her sides on a completely pure white background with no floor, wall, environment, or shadows visible, projecting authoritative professionalism and refined elegance.",
+      "text_3": "Photorealistic image, dramatic top left lighting, photorealistic full body shot of a South Asian man in his late twenties with an athletic build, clean-shaven with defined jawline, wearing a fitted navy technical jacket and white minimalist sneakers, standing in a relaxed upright stance with both arms resting naturally at his sides against a pure white background with absolutely no floor, wall, shadows, or environmental elements, embodying focused discipline and modern tech-forward minimalism.",
+      "text_4": "Photorealistic image, dramatic top left lighting, photorealistic full body shot of a woman in her mid-forties with Nordic features, silver-blonde shoulder-length hair styled sleekly, wearing an understated charcoal turtleneck and tailored black trousers, standing with both arms at her sides in a calm neutral pose on a pure white background with no floor, wall, shadows, or surfaces visible, conveying intellectual authority and timeless professional credibility.",
+      "text": [
+        "932",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text \ud83d\udc0d"
+    }
+  },
+  "914": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "964",
+        0
+      ],
+      "max_tokens": 30000,
+      "temperature": 0.5,
+      "seed": [
+        "970",
+        0
+      ],
+      "timeout": 500,
+      "system_prompt": [
+        "955",
+        0
+      ],
+      "model_override": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "923": {
+    "inputs": {
+      "filename_prefix": "video/ComfyUI",
+      "format": "auto",
+      "codec": "auto",
+      "video-preview": "",
+      "video": [
+        "692",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "demo-video-1"
+    }
+  },
+  "927": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "962",
+        0
+      ],
+      "max_tokens": 30000,
+      "temperature": 0.5,
+      "seed": [
+        "974",
+        0
+      ],
+      "timeout": 500,
+      "system_prompt": [
+        "951",
+        0
+      ],
+      "model_override": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "929": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "908",
+        0
+      ],
+      "max_tokens": 30000,
+      "temperature": 0.5,
+      "seed": [
+        "979",
+        0
+      ],
+      "timeout": 500,
+      "system_prompt": [
+        "960",
+        0
+      ],
+      "model_override": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "932": {
+    "inputs": {
+      "prompt": [
+        "927",
+        0
+      ],
+      "start_index": 0,
+      "max_rows": 5,
+      "remove_empty_lines": true
+    },
+    "class_type": "easy promptLine",
+    "_meta": {
+      "title": "PromptLine"
+    }
+  },
+  "933": {
+    "inputs": {
+      "string": "europe uk"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "client-region"
+    }
+  },
+  "938": {
+    "inputs": {
+      "string": "black eye-glasses"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "avatar-edits-request"
+    }
+  },
+  "950": {
+    "inputs": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6",
+      "prompt": [
+        "900",
+        0
+      ],
+      "max_tokens": 30000,
+      "temperature": 0.5,
+      "seed": 1,
+      "timeout": 500,
+      "system_prompt": [
+        "958",
+        0
+      ],
+      "model_override": [
+        "1000",
+        0
+      ]
+    },
+    "class_type": "NSLLMChat",
+    "_meta": {
+      "title": "NS LLM Chat"
+    }
+  },
+  "951": {
+    "inputs": {
+      "string": "You are an AI avatar prompt generator for marketing purposes. When given a target region/market and a list of competitor influencers, you will analyze the competitor creators and generate 5 AI avatar prompts that serve as original spinoffs.\n\nFollow these rules strictly:\n\n**Input Analysis:**\n- Carefully assess the target region to determine the appropriate demographic representation that authentically reflects the local population and market context\n- Analyze each competitor influencer's age, gender, physical appearance, and style\n- Extract patterns in the type of creators the market responds to\n\n**Prompt Generation Rules:**\n- Generate exactly 5 prompts, each as a single standalone paragraph\n- No titles, labels, numbers, or names \u2014 only the 5 paragraphs separated by line breaks\n- Each prompt must begin with: \"Photorealistic image, dramatic top left lighting, photorealistic full body shot of\"\n- Every prompt must specify a pure white background with no floor, no wall, no shadows, no surfaces, no environment \u2014 only the subject\n- Emphasize the white background requirement strongly in every prompt\n- Make the 5 characters as visually distinct from one another as possible in terms of age, gender, build, style, and energy \u2014 while remaining within the demographic and aesthetic boundaries of what the competitor landscape uses\n- Every character must be standing in a relaxed, neutral upright pose with both arms resting naturally at their sides\n- Every character must have completely empty hands \u2014 no objects of any kind such as phones, laptops, mugs, bags, microphones, or accessories being held\n- Be bold and creative with styling and personality expression through clothing, grooming, and overall aesthetic\n- Demographic representation must feel natural and credible for the specified target region\n\n**Output:**\nReturn only the 5 prompts. No preamble, no explanation, no commentary."
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "System Prompt"
+    }
+  },
+  "952": {
+    "inputs": {
+      "delimiter": " ",
+      "string1": [
+        "989",
+        0
+      ],
+      "string2": [
+        "938",
+        0
+      ]
+    },
+    "class_type": "JoinStrings",
+    "_meta": {
+      "title": "Join Strings"
+    }
+  },
+  "955": {
+    "inputs": {
+      "string": "# System Prompt\n\n---\n\nYou are a strategic research and intelligence assistant. When provided with a **client name** and their **activity space/industry**, you will immediately conduct a focused web search on that client and return a structured intelligence report.\n\n---\n\n## STRICT OUTPUT RULES\n\n- Output **only** the formatted report. Nothing else.\n- **No preamble, no introduction, no closing remarks, no meta-commentary, no action plan, no thoughts.**\n- Do not explain what you searched, what you found, or how you structured the response.\n- Begin your response with the report header. End it with the last line of content.\n\n---\n\n## SEARCH SCOPE\n\nSearch **only** for information relevant to:\n- The client's core business, positioning, and value proposition\n- Their publicly known strengths and competitive advantages\n- Their publicly known weaknesses, gaps, and vulnerabilities\n\nSearch nothing beyond this scope.\n\n---\n\n## OUTPUT STRUCTURE\n\nFollow this structure **exactly**, with no deviation:\n\n---\n\n**Client Intelligence & AI Influencer Strategy Report**\n\n**CLIENT NAME:** [Client Name]\n\n[One concise paragraph describing the client's core business, market position, and defining value proposition.]\n\n**Top 5 Strengths**\n1. [Strength title] \u2014 [Brief explanation]\n2. [Strength title] \u2014 [Brief explanation]\n3. [Strength title] \u2014 [Brief explanation]\n4. [Strength title] \u2014 [Brief explanation]\n5. [Strength title] \u2014 [Brief explanation]\n\n**Top 5 Weaknesses**\n1. [Weakness title] \u2014 [Brief explanation]\n2. [Weakness title] \u2014 [Brief explanation]\n3. [Weakness title] \u2014 [Brief explanation]\n4. [Weakness title] \u2014 [Brief explanation]\n5. [Weakness title] \u2014 [Brief explanation]"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "System Prompt"
+    }
+  },
+  "958": {
+    "inputs": {
+      "string": "You are an expert digital marketing analyst. When given a client name, conduct a thorough web search across all major platforms and return a structured **Online Presence Audit \u2014 Engagement & Performance Summary**.\n\n**Instructions:**\n\n- Search for the client's presence on: Website, Instagram, TikTok, YouTube, X (Twitter), LinkedIn, and Facebook\n- Gather or estimate: handle/URL, followers/traffic, engagement rate, posting frequency, and overall performance\n- Assign a score out of 10 for each platform based on consistency, engagement, content quality, and growth signals\n- Include a brief notes column highlighting strengths, weaknesses, and opportunities\n- If data is unavailable, provide clearly labeled estimates based on comparable benchmarks and available signals\n- Present findings in a clean markdown table with the following columns:\n\n`Platform | Handle/URL | Followers/Traffic | Engagement | Post Freq. | Score /10 | Notes`\n\n**Rules:**\n- Be concise but insightful in the Notes column\n- Flag any missing or inactive platforms\n- Maintain an objective, analytical tone\n- Do not fabricate specific metrics \u2014 distinguish between confirmed data and estimates\n- Prioritize publicly available data, third-party tools references, and observable patterns"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "System Prompt"
+    }
+  },
+  "960": {
+    "inputs": {
+      "string": "```\nSYSTEM PROMPT\n\nYou are a persona extraction and AI character design assistant.\n\nTASK:\nWhen provided with an influencer analysis report, identify the top 5 influencers and generate structured persona profiles suitable for creating AI influencer characters inspired by them.\n\nINSTRUCTIONS:\n- Extract only the top 5 influencers from the provided report\n- Do not research, retrieve, or reference any information outside the provided report\n- Do not add commentary, preamble, introductions, summaries, or action plans\n- Output only the structured table \u2014 nothing else\n\nFOR EACH INFLUENCER, EXTRACT OR INFER:\n- Name\n- Age\n- Sex\n- Physical Appearance (build, hair, style, distinguishing features)\n- Possessions (car, home, tech, fashion, accessories)\n- Lifestyle (habits, activities, social setting, values, aesthetic)\n\nOUTPUT FORMAT:\nDeliver a clean, structured table with the following columns:\n\n| # | Name | Age | Sex | Physical Appearance | Possessions | Lifestyle |\n|---|------|-----|-----|-------------------|-------------|-----------|\n\nSTRICT RULES:\n- No introductory text\n- No closing remarks\n- No explanations or thought process\n- No actions described\n- Table only\n```"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "System Prompt"
+    }
+  },
+  "962": {
+    "inputs": {
+      "inputcount": 3,
+      "delimiter": " ",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "984",
+        0
+      ],
+      "string_2": [
+        "933",
+        0
+      ],
+      "string_3": [
+        "929",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "963": {
+    "inputs": {
+      "inputcount": 2,
+      "delimiter": " ",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "914",
+        0
+      ],
+      "string_2": [
+        "950",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "964": {
+    "inputs": {
+      "inputcount": 3,
+      "delimiter": " ",
+      "return_list": false,
+      "Update inputs": null,
+      "string_1": [
+        "968",
+        0
+      ],
+      "string_2": [
+        "969",
+        0
+      ]
+    },
+    "class_type": "JoinStringMulti",
+    "_meta": {
+      "title": "Join String Multi"
+    }
+  },
+  "968": {
+    "inputs": {
+      "string": "naga.com"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "client-name"
+    }
+  },
+  "969": {
+    "inputs": {
+      "string": "crypto trading platform"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "client-market"
+    }
+  },
+  "970": {
+    "inputs": {
+      "seed": 1315,
+      "min_value": 0,
+      "max_value": 5000
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "client-seed"
+    }
+  },
+  "973": {
+    "inputs": {
+      "image_list": [
+        "975",
+        0
+      ]
+    },
+    "class_type": "CR Batch Images From List",
+    "_meta": {
+      "title": "\ud83d\udee0\ufe0f CR Batch Images From List"
+    }
+  },
+  "974": {
+    "inputs": {
+      "seed": 4624,
+      "min_value": 0,
+      "max_value": 5000
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "avatar-proposals-seed"
+    }
+  },
+  "975": {
+    "inputs": {
+      "prompt": [
+        "912",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": [
+        "974",
+        0
+      ],
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "977": {
+    "inputs": {
+      "batch_index": 1,
+      "length": 1,
+      "image": [
+        "973",
+        0
+      ]
+    },
+    "class_type": "ImageFromBatch",
+    "_meta": {
+      "title": "avatar-select"
+    }
+  },
+  "979": {
+    "inputs": {
+      "seed": 1315,
+      "min_value": 0,
+      "max_value": 5000
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "competitor-analysis-seed"
+    }
+  },
+  "981": {
+    "inputs": {
+      "prompt": [
+        "952",
+        0
+      ],
+      "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+      "seed": [
+        "988",
+        0
+      ],
+      "aspect_ratio": "9:16",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "thinking_level": "MINIMAL",
+      "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+      "images": [
+        "977",
+        0
+      ]
+    },
+    "class_type": "GeminiNanoBanana2",
+    "_meta": {
+      "title": "Nano Banana 2"
+    }
+  },
+  "984": {
+    "inputs": {
+      "string": "Client region of activity is:\n"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "client-region"
+    }
+  },
+  "988": {
+    "inputs": {
+      "seed": 1366,
+      "min_value": 0,
+      "max_value": 5000
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "avatar-edit-seed"
+    }
+  },
+  "989": {
+    "inputs": {
+      "string": "You are an image editing assistant. When given a list of edits to perform:\n\n- Apply changes **only** to the specified areas. Leave all other elements untouched.\n- Match the lighting, style, and visual aesthetic of the reference image.\n- Ensure each modification blends naturally with the surrounding unchanged areas.\n"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "avatar-edits"
+    }
+  },
+  "1000": {
+    "inputs": {
+      "model": "claude-haiku-4-5"
+    },
+    "class_type": "NSLLMModelSelector",
+    "_meta": {
+      "title": "NS LLM Model Selector"
+    }
+  },
+  "1010": {
+    "inputs": {
+      "seed": 705479629558910,
+      "min_value": 0,
+      "max_value": 100
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "All Videos Seed"
+    }
+  },
+  "1017": {
+    "inputs": {
+      "seed": -156860006162529,
+      "min_value": 0,
+      "max_value": 100
+    },
+    "class_type": "SymbioticaSeed",
+    "_meta": {
+      "title": "start-image1-seed"
+    }
+  },
+  "1040": {
+    "inputs": {
+      "find": "{\"prompt\": \"",
+      "replace": "",
+      "text": [
+        "336",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "1042": {
+    "inputs": {
+      "find": "\"}",
+      "replace": "",
+      "text": [
+        "1040",
+        0
+      ]
+    },
+    "class_type": "Text Find and Replace",
+    "_meta": {
+      "title": "Text Find and Replace"
+    }
+  },
+  "389:301": {
+    "inputs": {
+      "value": 30
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "FPS"
+    }
+  },
+  "385:127": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "385:125",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "385:125": {
+    "inputs": {
+      "av_latent": [
+        "384:119",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "384:119": {
+    "inputs": {
+      "noise": [
+        "384:114",
+        0
+      ],
+      "guider": [
+        "384:103",
+        0
+      ],
+      "sampler": [
+        "384:138",
+        0
+      ],
+      "sigmas": [
+        "384:100",
+        0
+      ],
+      "latent_image": [
+        "384:117",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "384:114": {
+    "inputs": {
+      "noise_seed": 765
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "384:103": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "318:107",
+        0
+      ],
+      "negative": [
+        "318:107",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "316:134": {
+    "inputs": {
+      "lora_name": "ltx-2.3-22b-distilled-lora-384.safetensors",
+      "strength_model": 0.6,
+      "model": [
+        "316:313",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Distill Lora (ONLY if you use DEV model)"
+    }
+  },
+  "316:313": {
+    "inputs": {
+      "unet_name": "ltx-2.3-22b-dev_transformer_only_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "318:107": {
+    "inputs": {
+      "frame_rate": [
+        "389:301",
+        0
+      ],
+      "positive": [
+        "318:121",
+        0
+      ],
+      "negative": [
+        "318:110",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXVConditioning"
+    }
+  },
+  "318:121": {
+    "inputs": {
+      "text": [
+        "356",
+        0
+      ],
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "316:190": {
+    "inputs": {
+      "clip_name1": "gemma_3_12B_it_fp8_scaled.safetensors",
+      "clip_name2": "ltx-2.3_text_projection_bf16.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "CLIPLoader (Gemma + LTX Embeddings)"
+    }
+  },
+  "318:110": {
+    "inputs": {
+      "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70, fast movements, blurry, mouth moving, talking, teeth visible, strong blush, glitter,slow motion,",
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "384:138": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "384:100": {
+    "inputs": {
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "384:117": {
+    "inputs": {
+      "video_latent": [
+        "384:160",
+        0
+      ],
+      "audio_latent": [
+        "384:116",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "384:160": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "382:162",
+        0
+      ],
+      "latent": [
+        "384:118",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "316:184": {
+    "inputs": {
+      "vae_name": "LTX23_video_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE (video VAE)"
+    }
+  },
+  "382:162": {
+    "inputs": {
+      "img_compression": 0,
+      "image": [
+        "317:246",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXVPreprocess"
+    }
+  },
+  "317:246": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "317:165",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "Resize Images by Longer Edge"
+    }
+  },
+  "317:165": {
+    "inputs": {
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "top",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "759",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "389:194": {
+    "inputs": {
+      "value": 720
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "WIDTH"
+    }
+  },
+  "389:195": {
+    "inputs": {
+      "value": 1280
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "HEIGHT"
+    }
+  },
+  "384:118": {
+    "inputs": {
+      "samples": [
+        "384:116",
+        0
+      ],
+      "upscale_model": [
+        "316:189",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "384:116": {
+    "inputs": {
+      "av_latent": [
+        "383:113",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "383:113": {
+    "inputs": {
+      "noise": [
+        "383:115",
+        0
+      ],
+      "guider": [
+        "383:129",
+        0
+      ],
+      "sampler": [
+        "383:137",
+        0
+      ],
+      "sigmas": [
+        "383:206",
+        0
+      ],
+      "latent_image": [
+        "382:109",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "383:115": {
+    "inputs": {
+      "noise_seed": [
+        "1010",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "383:129": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "318:107",
+        0
+      ],
+      "negative": [
+        "318:107",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "383:137": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "383:206": {
+    "inputs": {
+      "steps": 12,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "382:109",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXVScheduler"
+    }
+  },
+  "382:109": {
+    "inputs": {
+      "video_latent": [
+        "382:161",
+        0
+      ],
+      "audio_latent": [
+        "382:271",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "382:161": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "382:162",
+        0
+      ],
+      "latent": [
+        "382:108",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "382:108": {
+    "inputs": {
+      "width": [
+        "317:163",
+        0
+      ],
+      "height": [
+        "317:163",
+        1
+      ],
+      "length": [
+        "389:304",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "EmptyLTXVLatentVideo"
+    }
+  },
+  "317:163": {
+    "inputs": {
+      "image": [
+        "317:164",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "317:164": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "317:165",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  },
+  "389:304": {
+    "inputs": {
+      "expression": "1+ 8*(round(a*b)/8)",
+      "a": [
+        "389:303",
+        0
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "389:303": {
+    "inputs": {
+      "value": 8
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "LENGTH (in seconds)"
+    }
+  },
+  "382:271": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "382:199",
+        0
+      ],
+      "on_true": [
+        "381:267",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Custom Audio = true |  LTX Audio  = false"
+    }
+  },
+  "382:199": {
+    "inputs": {
+      "frames_number": [
+        "389:304",
+        1
+      ],
+      "frame_rate": [
+        "382:286",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV Empty Latent Audio"
+    }
+  },
+  "382:286": {
+    "inputs": {
+      "value": "a",
+      "a": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "\ud83d\udd27 Simple Math"
+    }
+  },
+  "316:196": {
+    "inputs": {
+      "vae_name": "LTX23_audio_vae_bf16.safetensors",
+      "device": "main_device",
+      "weight_dtype": "bf16"
+    },
+    "class_type": "VAELoaderKJ",
+    "_meta": {
+      "title": "VAELoader KJ (audio VAE)"
+    }
+  },
+  "381:267": {
+    "inputs": {
+      "samples": [
+        "381:260",
+        0
+      ],
+      "mask": [
+        "381:264",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "381:260": {
+    "inputs": {
+      "audio": [
+        "381:258",
+        0
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV Audio VAE Encode"
+    }
+  },
+  "381:258": {
+    "inputs": {
+      "model": [
+        "381:259",
+        0
+      ],
+      "audio": [
+        "381:256",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "381:259": {
+    "inputs": {
+      "model_name": "MelBandRoformer_fp16.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "381:256": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "381:278",
+        0
+      ],
+      "audio": [
+        "453",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "381:278": {
+    "inputs": {
+      "expression": "a/b",
+      "a": [
+        "389:304",
+        1
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "381:264": {
+    "inputs": {
+      "value": 0,
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "316:189": {
+    "inputs": {
+      "model_name": "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+    },
+    "class_type": "LatentUpscaleModelLoader",
+    "_meta": {
+      "title": "Load Latent Upscale Model"
+    }
+  },
+  "385:296": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "385:201",
+        0
+      ],
+      "on_true": [
+        "381:256",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "USE CUSTOM AUDIO"
+    }
+  },
+  "385:201": {
+    "inputs": {
+      "samples": [
+        "385:125",
+        1
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
+  "454:513": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "454:512",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "454:512": {
+    "inputs": {
+      "av_latent": [
+        "460:546",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "460:546": {
+    "inputs": {
+      "noise": [
+        "460:541",
+        0
+      ],
+      "guider": [
+        "460:545",
+        0
+      ],
+      "sampler": [
+        "460:542",
+        0
+      ],
+      "sigmas": [
+        "460:543",
+        0
+      ],
+      "latent_image": [
+        "460:544",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "460:541": {
+    "inputs": {
+      "noise_seed": 765
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "460:545": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "455:517",
+        0
+      ],
+      "negative": [
+        "455:517",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "455:517": {
+    "inputs": {
+      "frame_rate": [
+        "389:301",
+        0
+      ],
+      "positive": [
+        "455:518",
+        0
+      ],
+      "negative": [
+        "455:516",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXVConditioning"
+    }
+  },
+  "455:518": {
+    "inputs": {
+      "text": [
+        "357",
+        0
+      ],
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "455:516": {
+    "inputs": {
+      "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70, fast movements, blurry, mouth moving, talking, teeth visible, strong blush, glitter,slow motion,",
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "460:542": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "460:543": {
+    "inputs": {
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "460:544": {
+    "inputs": {
+      "video_latent": [
+        "460:539",
+        0
+      ],
+      "audio_latent": [
+        "460:538",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "460:539": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "458:530",
+        0
+      ],
+      "latent": [
+        "460:540",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "458:530": {
+    "inputs": {
+      "img_compression": 0,
+      "image": [
+        "456:520",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXVPreprocess"
+    }
+  },
+  "456:520": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "456:519",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "Resize Images by Longer Edge"
+    }
+  },
+  "456:519": {
+    "inputs": {
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "top",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "760",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "460:540": {
+    "inputs": {
+      "samples": [
+        "460:538",
+        0
+      ],
+      "upscale_model": [
+        "316:189",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "460:538": {
+    "inputs": {
+      "av_latent": [
+        "461:547",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "461:547": {
+    "inputs": {
+      "noise": [
+        "461:548",
+        0
+      ],
+      "guider": [
+        "461:550",
+        0
+      ],
+      "sampler": [
+        "461:549",
+        0
+      ],
+      "sigmas": [
+        "461:551",
+        0
+      ],
+      "latent_image": [
+        "458:533",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "461:548": {
+    "inputs": {
+      "noise_seed": [
+        "1010",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "461:550": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "455:517",
+        0
+      ],
+      "negative": [
+        "455:517",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "461:549": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "461:551": {
+    "inputs": {
+      "steps": 12,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "458:533",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXVScheduler"
+    }
+  },
+  "458:533": {
+    "inputs": {
+      "video_latent": [
+        "458:536",
+        0
+      ],
+      "audio_latent": [
+        "458:535",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "458:536": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "458:530",
+        0
+      ],
+      "latent": [
+        "458:531",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "458:531": {
+    "inputs": {
+      "width": [
+        "456:522",
+        0
+      ],
+      "height": [
+        "456:522",
+        1
+      ],
+      "length": [
+        "389:304",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "EmptyLTXVLatentVideo"
+    }
+  },
+  "456:522": {
+    "inputs": {
+      "image": [
+        "456:521",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "456:521": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "456:519",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  },
+  "458:535": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "458:534",
+        0
+      ],
+      "on_true": [
+        "457:527",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Custom Audio = true |  LTX Audio  = false"
+    }
+  },
+  "458:534": {
+    "inputs": {
+      "frames_number": [
+        "389:304",
+        1
+      ],
+      "frame_rate": [
+        "458:532",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV Empty Latent Audio"
+    }
+  },
+  "458:532": {
+    "inputs": {
+      "value": "a",
+      "a": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "\ud83d\udd27 Simple Math"
+    }
+  },
+  "457:527": {
+    "inputs": {
+      "samples": [
+        "457:523",
+        0
+      ],
+      "mask": [
+        "457:526",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "457:523": {
+    "inputs": {
+      "audio": [
+        "457:525",
+        0
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV Audio VAE Encode"
+    }
+  },
+  "457:525": {
+    "inputs": {
+      "model": [
+        "457:529",
+        0
+      ],
+      "audio": [
+        "457:524",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "457:529": {
+    "inputs": {
+      "model_name": "MelBandRoformer_fp16.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "457:524": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "457:528",
+        0
+      ],
+      "audio": [
+        "465",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "457:528": {
+    "inputs": {
+      "expression": "a/b",
+      "a": [
+        "389:304",
+        1
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "457:526": {
+    "inputs": {
+      "value": 0,
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "454:515": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "454:514",
+        0
+      ],
+      "on_true": [
+        "457:524",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "USE CUSTOM AUDIO"
+    }
+  },
+  "454:514": {
+    "inputs": {
+      "samples": [
+        "454:512",
+        1
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
+  "466:553": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "466:552",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "466:552": {
+    "inputs": {
+      "av_latent": [
+        "470:582",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "470:582": {
+    "inputs": {
+      "noise": [
+        "470:577",
+        0
+      ],
+      "guider": [
+        "470:581",
+        0
+      ],
+      "sampler": [
+        "470:578",
+        0
+      ],
+      "sigmas": [
+        "470:579",
+        0
+      ],
+      "latent_image": [
+        "470:580",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "470:577": {
+    "inputs": {
+      "noise_seed": 765
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "470:581": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "467:557",
+        0
+      ],
+      "negative": [
+        "467:557",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "467:557": {
+    "inputs": {
+      "frame_rate": [
+        "389:301",
+        0
+      ],
+      "positive": [
+        "467:558",
+        0
+      ],
+      "negative": [
+        "467:556",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXVConditioning"
+    }
+  },
+  "467:558": {
+    "inputs": {
+      "text": [
+        "359",
+        0
+      ],
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "467:556": {
+    "inputs": {
+      "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70, fast movements, blurry, mouth moving, talking, teeth visible, strong blush, glitter,slow motion,",
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "470:578": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "470:579": {
+    "inputs": {
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "470:580": {
+    "inputs": {
+      "video_latent": [
+        "470:575",
+        0
+      ],
+      "audio_latent": [
+        "470:574",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "470:575": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "469:566",
+        0
+      ],
+      "latent": [
+        "470:576",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "469:566": {
+    "inputs": {
+      "img_compression": 0,
+      "image": [
+        "472:589",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXVPreprocess"
+    }
+  },
+  "472:589": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "472:588",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "Resize Images by Longer Edge"
+    }
+  },
+  "472:588": {
+    "inputs": {
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "top",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "761",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "470:576": {
+    "inputs": {
+      "samples": [
+        "470:574",
+        0
+      ],
+      "upscale_model": [
+        "316:189",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "470:574": {
+    "inputs": {
+      "av_latent": [
+        "471:583",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "471:583": {
+    "inputs": {
+      "noise": [
+        "471:584",
+        0
+      ],
+      "guider": [
+        "471:586",
+        0
+      ],
+      "sampler": [
+        "471:585",
+        0
+      ],
+      "sigmas": [
+        "471:587",
+        0
+      ],
+      "latent_image": [
+        "469:569",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "471:584": {
+    "inputs": {
+      "noise_seed": [
+        "1010",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "471:586": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "467:557",
+        0
+      ],
+      "negative": [
+        "467:557",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "471:585": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "471:587": {
+    "inputs": {
+      "steps": 12,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "469:569",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXVScheduler"
+    }
+  },
+  "469:569": {
+    "inputs": {
+      "video_latent": [
+        "469:572",
+        0
+      ],
+      "audio_latent": [
+        "469:571",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "469:572": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "469:566",
+        0
+      ],
+      "latent": [
+        "469:567",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "469:567": {
+    "inputs": {
+      "width": [
+        "472:591",
+        0
+      ],
+      "height": [
+        "472:591",
+        1
+      ],
+      "length": [
+        "389:304",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "EmptyLTXVLatentVideo"
+    }
+  },
+  "472:591": {
+    "inputs": {
+      "image": [
+        "472:590",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "472:590": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "472:588",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  },
+  "469:571": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "469:570",
+        0
+      ],
+      "on_true": [
+        "468:563",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Custom Audio = true |  LTX Audio  = false"
+    }
+  },
+  "469:570": {
+    "inputs": {
+      "frames_number": [
+        "389:304",
+        1
+      ],
+      "frame_rate": [
+        "469:568",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV Empty Latent Audio"
+    }
+  },
+  "469:568": {
+    "inputs": {
+      "value": "a",
+      "a": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "\ud83d\udd27 Simple Math"
+    }
+  },
+  "468:563": {
+    "inputs": {
+      "samples": [
+        "468:559",
+        0
+      ],
+      "mask": [
+        "468:562",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "468:559": {
+    "inputs": {
+      "audio": [
+        "468:561",
+        0
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV Audio VAE Encode"
+    }
+  },
+  "468:561": {
+    "inputs": {
+      "model": [
+        "468:565",
+        0
+      ],
+      "audio": [
+        "468:560",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "468:565": {
+    "inputs": {
+      "model_name": "MelBandRoformer_fp16.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "468:560": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "468:564",
+        0
+      ],
+      "audio": [
+        "474",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "468:564": {
+    "inputs": {
+      "expression": "a/b",
+      "a": [
+        "389:304",
+        1
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "468:562": {
+    "inputs": {
+      "value": 0,
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "466:555": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "466:554",
+        0
+      ],
+      "on_true": [
+        "468:560",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "USE CUSTOM AUDIO"
+    }
+  },
+  "466:554": {
+    "inputs": {
+      "samples": [
+        "466:552",
+        1
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
+  "478:593": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "478:592",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "478:592": {
+    "inputs": {
+      "av_latent": [
+        "484:631",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "484:631": {
+    "inputs": {
+      "noise": [
+        "484:626",
+        0
+      ],
+      "guider": [
+        "484:630",
+        0
+      ],
+      "sampler": [
+        "484:627",
+        0
+      ],
+      "sigmas": [
+        "484:628",
+        0
+      ],
+      "latent_image": [
+        "484:629",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "484:626": {
+    "inputs": {
+      "noise_seed": 765
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "484:630": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "479:597",
+        0
+      ],
+      "negative": [
+        "479:597",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "479:597": {
+    "inputs": {
+      "frame_rate": [
+        "389:301",
+        0
+      ],
+      "positive": [
+        "479:598",
+        0
+      ],
+      "negative": [
+        "479:596",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXVConditioning"
+    }
+  },
+  "479:598": {
+    "inputs": {
+      "text": [
+        "361",
+        0
+      ],
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "479:596": {
+    "inputs": {
+      "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70, fast movements, blurry, mouth moving, talking, teeth visible, strong blush, glitter,slow motion,",
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "484:627": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "484:628": {
+    "inputs": {
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "484:629": {
+    "inputs": {
+      "video_latent": [
+        "484:624",
+        0
+      ],
+      "audio_latent": [
+        "484:623",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "484:624": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "483:615",
+        0
+      ],
+      "latent": [
+        "484:625",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "483:615": {
+    "inputs": {
+      "img_compression": 0,
+      "image": [
+        "482:612",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXVPreprocess"
+    }
+  },
+  "482:612": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "482:611",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "Resize Images by Longer Edge"
+    }
+  },
+  "482:611": {
+    "inputs": {
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "top",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "762",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "484:625": {
+    "inputs": {
+      "samples": [
+        "484:623",
+        0
+      ],
+      "upscale_model": [
+        "316:189",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "484:623": {
+    "inputs": {
+      "av_latent": [
+        "481:606",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "481:606": {
+    "inputs": {
+      "noise": [
+        "481:607",
+        0
+      ],
+      "guider": [
+        "481:609",
+        0
+      ],
+      "sampler": [
+        "481:608",
+        0
+      ],
+      "sigmas": [
+        "481:610",
+        0
+      ],
+      "latent_image": [
+        "483:618",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "481:607": {
+    "inputs": {
+      "noise_seed": [
+        "1010",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "481:609": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "479:597",
+        0
+      ],
+      "negative": [
+        "479:597",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "481:608": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "481:610": {
+    "inputs": {
+      "steps": 12,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "483:618",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXVScheduler"
+    }
+  },
+  "483:618": {
+    "inputs": {
+      "video_latent": [
+        "483:621",
+        0
+      ],
+      "audio_latent": [
+        "483:620",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "483:621": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "483:615",
+        0
+      ],
+      "latent": [
+        "483:616",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "483:616": {
+    "inputs": {
+      "width": [
+        "482:614",
+        0
+      ],
+      "height": [
+        "482:614",
+        1
+      ],
+      "length": [
+        "389:304",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "EmptyLTXVLatentVideo"
+    }
+  },
+  "482:614": {
+    "inputs": {
+      "image": [
+        "482:613",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "482:613": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "482:611",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  },
+  "483:620": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "483:619",
+        0
+      ],
+      "on_true": [
+        "480:603",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Custom Audio = true |  LTX Audio  = false"
+    }
+  },
+  "483:619": {
+    "inputs": {
+      "frames_number": [
+        "389:304",
+        1
+      ],
+      "frame_rate": [
+        "483:617",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV Empty Latent Audio"
+    }
+  },
+  "483:617": {
+    "inputs": {
+      "value": "a",
+      "a": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "\ud83d\udd27 Simple Math"
+    }
+  },
+  "480:603": {
+    "inputs": {
+      "samples": [
+        "480:599",
+        0
+      ],
+      "mask": [
+        "480:602",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "480:599": {
+    "inputs": {
+      "audio": [
+        "480:601",
+        0
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV Audio VAE Encode"
+    }
+  },
+  "480:601": {
+    "inputs": {
+      "model": [
+        "480:605",
+        0
+      ],
+      "audio": [
+        "480:600",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "480:605": {
+    "inputs": {
+      "model_name": "MelBandRoformer_fp16.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "480:600": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "480:604",
+        0
+      ],
+      "audio": [
+        "489",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "480:604": {
+    "inputs": {
+      "expression": "a/b",
+      "a": [
+        "389:304",
+        1
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "480:602": {
+    "inputs": {
+      "value": 0,
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "478:595": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "478:594",
+        0
+      ],
+      "on_true": [
+        "480:600",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "USE CUSTOM AUDIO"
+    }
+  },
+  "478:594": {
+    "inputs": {
+      "samples": [
+        "478:592",
+        1
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  },
+  "500:669": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "500:668",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "500:668": {
+    "inputs": {
+      "av_latent": [
+        "499:667",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "499:667": {
+    "inputs": {
+      "noise": [
+        "499:662",
+        0
+      ],
+      "guider": [
+        "499:666",
+        0
+      ],
+      "sampler": [
+        "499:663",
+        0
+      ],
+      "sigmas": [
+        "499:664",
+        0
+      ],
+      "latent_image": [
+        "499:665",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "499:662": {
+    "inputs": {
+      "noise_seed": 765
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "499:666": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "494:633",
+        0
+      ],
+      "negative": [
+        "494:633",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "494:633": {
+    "inputs": {
+      "frame_rate": [
+        "389:301",
+        0
+      ],
+      "positive": [
+        "494:634",
+        0
+      ],
+      "negative": [
+        "494:632",
+        0
+      ]
+    },
+    "class_type": "LTXVConditioning",
+    "_meta": {
+      "title": "LTXVConditioning"
+    }
+  },
+  "494:634": {
+    "inputs": {
+      "text": [
+        "363",
+        0
+      ],
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "494:632": {
+    "inputs": {
+      "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70, fast movements, blurry, mouth moving, talking, teeth visible, strong blush, glitter,slow motion,",
+      "clip": [
+        "316:190",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "499:663": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "499:664": {
+    "inputs": {
+      "sigmas": "0.909375, 0.725, 0.421875, 0.0"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "ManualSigmas"
+    }
+  },
+  "499:665": {
+    "inputs": {
+      "video_latent": [
+        "499:660",
+        0
+      ],
+      "audio_latent": [
+        "499:659",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "499:660": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "498:651",
+        0
+      ],
+      "latent": [
+        "499:661",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "498:651": {
+    "inputs": {
+      "img_compression": 0,
+      "image": [
+        "497:648",
+        0
+      ]
+    },
+    "class_type": "LTXVPreprocess",
+    "_meta": {
+      "title": "LTXVPreprocess"
+    }
+  },
+  "497:648": {
+    "inputs": {
+      "longer_edge": 1536,
+      "images": [
+        "497:647",
+        0
+      ]
+    },
+    "class_type": "ResizeImagesByLongerEdge",
+    "_meta": {
+      "title": "Resize Images by Longer Edge"
+    }
+  },
+  "497:647": {
+    "inputs": {
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "keep_proportion": "crop",
+      "pad_color": "0, 0, 0",
+      "crop_position": "top",
+      "divisible_by": 32,
+      "device": "cpu",
+      "image": [
+        "763",
+        0
+      ]
+    },
+    "class_type": "ImageResizeKJv2",
+    "_meta": {
+      "title": "Resize Image v2"
+    }
+  },
+  "499:661": {
+    "inputs": {
+      "samples": [
+        "499:659",
+        0
+      ],
+      "upscale_model": [
+        "316:189",
+        0
+      ],
+      "vae": [
+        "316:184",
+        0
+      ]
+    },
+    "class_type": "LTXVLatentUpsampler",
+    "_meta": {
+      "title": "spatial"
+    }
+  },
+  "499:659": {
+    "inputs": {
+      "av_latent": [
+        "496:642",
+        0
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXVSeparateAVLatent"
+    }
+  },
+  "496:642": {
+    "inputs": {
+      "noise": [
+        "496:643",
+        0
+      ],
+      "guider": [
+        "496:645",
+        0
+      ],
+      "sampler": [
+        "496:644",
+        0
+      ],
+      "sigmas": [
+        "496:646",
+        0
+      ],
+      "latent_image": [
+        "498:654",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "496:643": {
+    "inputs": {
+      "noise_seed": [
+        "1010",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "RandomNoise"
+    }
+  },
+  "496:645": {
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "305",
+        0
+      ],
+      "positive": [
+        "494:633",
+        0
+      ],
+      "negative": [
+        "494:633",
+        1
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "CFGGuider"
+    }
+  },
+  "496:644": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "KSamplerSelect"
+    }
+  },
+  "496:646": {
+    "inputs": {
+      "steps": 12,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": [
+        "498:654",
+        0
+      ]
+    },
+    "class_type": "LTXVScheduler",
+    "_meta": {
+      "title": "LTXVScheduler"
+    }
+  },
+  "498:654": {
+    "inputs": {
+      "video_latent": [
+        "498:657",
+        0
+      ],
+      "audio_latent": [
+        "498:656",
+        0
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "498:657": {
+    "inputs": {
+      "strength": 1,
+      "bypass": false,
+      "vae": [
+        "316:184",
+        0
+      ],
+      "image": [
+        "498:651",
+        0
+      ],
+      "latent": [
+        "498:652",
+        0
+      ]
+    },
+    "class_type": "LTXVImgToVideoInplace",
+    "_meta": {
+      "title": "LTXVImgToVideoInplace"
+    }
+  },
+  "498:652": {
+    "inputs": {
+      "width": [
+        "497:650",
+        0
+      ],
+      "height": [
+        "497:650",
+        1
+      ],
+      "length": [
+        "389:304",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLTXVLatentVideo",
+    "_meta": {
+      "title": "EmptyLTXVLatentVideo"
+    }
+  },
+  "497:650": {
+    "inputs": {
+      "image": [
+        "497:649",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "497:649": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 0.5,
+      "scale_method": "area",
+      "input": [
+        "497:647",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask"
+    }
+  },
+  "498:656": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "498:655",
+        0
+      ],
+      "on_true": [
+        "495:639",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "Custom Audio = true |  LTX Audio  = false"
+    }
+  },
+  "498:655": {
+    "inputs": {
+      "frames_number": [
+        "389:304",
+        1
+      ],
+      "frame_rate": [
+        "498:653",
+        0
+      ],
+      "batch_size": 1,
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVEmptyLatentAudio",
+    "_meta": {
+      "title": "LTXV Empty Latent Audio"
+    }
+  },
+  "498:653": {
+    "inputs": {
+      "value": "a",
+      "a": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleMath+",
+    "_meta": {
+      "title": "\ud83d\udd27 Simple Math"
+    }
+  },
+  "495:639": {
+    "inputs": {
+      "samples": [
+        "495:635",
+        0
+      ],
+      "mask": [
+        "495:638",
+        0
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "495:635": {
+    "inputs": {
+      "audio": [
+        "495:637",
+        0
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEEncode",
+    "_meta": {
+      "title": "LTXV Audio VAE Encode"
+    }
+  },
+  "495:637": {
+    "inputs": {
+      "model": [
+        "495:641",
+        0
+      ],
+      "audio": [
+        "495:636",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "495:641": {
+    "inputs": {
+      "model_name": "MelBandRoformer_fp16.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "495:636": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "495:640",
+        0
+      ],
+      "audio": [
+        "493",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "495:640": {
+    "inputs": {
+      "expression": "a/b",
+      "a": [
+        "389:304",
+        1
+      ],
+      "b": [
+        "389:301",
+        0
+      ]
+    },
+    "class_type": "SimpleCalculatorKJ",
+    "_meta": {
+      "title": "SimpleCalculatorKJ"
+    }
+  },
+  "495:638": {
+    "inputs": {
+      "value": 0,
+      "width": [
+        "389:194",
+        0
+      ],
+      "height": [
+        "389:195",
+        0
+      ]
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "SolidMask"
+    }
+  },
+  "500:671": {
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "500:670",
+        0
+      ],
+      "on_true": [
+        "495:636",
+        0
+      ]
+    },
+    "class_type": "ComfySwitchNode",
+    "_meta": {
+      "title": "USE CUSTOM AUDIO"
+    }
+  },
+  "500:670": {
+    "inputs": {
+      "samples": [
+        "500:668",
+        1
+      ],
+      "audio_vae": [
+        "316:196",
+        0
+      ]
+    },
+    "class_type": "LTXVAudioVAEDecode",
+    "_meta": {
+      "title": "LTXV Audio VAE Decode"
+    }
+  }
+}
