@@ -26,6 +26,13 @@ identify specific input nodes by position) is needed to disambiguate. For now,
 Only 2 output class_types found: SaveVideo (1 named), CreateVideo (5 intermediate).
 No SaveImage or PreviewAny nodes — those are on the other output paths not captured.
 
+## workflow_sync.py already handles .api.json (2026-04-01)
+
+No changes needed. The `.api` suffix becomes part of the filename stem during
+flat<->repo mapping. `flat_to_repo_path("avatara-dev-x.api.json")` correctly
+produces `avatara/dev/x.api.json` and round-trips back. The `.endswith(".json")`
+filter in scan functions passes both `.json` and `.api.json`.
+
 ## ComfyUI Frontend Extension API (researched 2026-04-01)
 
 ### Import paths
