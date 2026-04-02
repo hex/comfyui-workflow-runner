@@ -15,14 +15,24 @@ DESIGN TIME (browser):
   -> Calls graphToPrompt() to get expanded API format
   -> POSTs to /workflow-runner/save-api
   -> Saves {name}.api.json alongside the UI workflow
+  -> Scans UI workflow for color-coded input/output nodes
+  -> Saves {name}.schema.json with group info for phase-splitting
 
 RUNTIME (server):
   POST /workflow-runner/run { workflow: "name", inputs: { "client-name": "Tesla" } }
   -> Loads name.api.json (pre-expanded)
-  -> Injects inputs by node title
+  -> Injects inputs by node title (or by schema for precision)
   -> Optionally prunes to specific output nodes + transitive deps
   -> Queues to prompt execution
   -> Returns prompt_id
+```
+
+Every save produces three files:
+
+```
+my-workflow.json          # UI workflow (ComfyUI native)
+my-workflow.api.json      # Expanded API format (ready for /prompt)
+my-workflow.schema.json   # Input/output schema with groups
 ```
 
 ## Install
@@ -36,11 +46,41 @@ git clone https://github.com/hex/comfyui-workflow-runner.git
 
 Restart ComfyUI. The extension loads automatically — no dependencies beyond what ComfyUI already provides.
 
+## Schema
+
+The schema is auto-generated from the UI workflow using color conventions:
+
+- **Input nodes**: color `#332922` inside green groups (`#8A8`)
+- **Output nodes**: color `#232` inside green groups (`#8A8`)
+
+Each entry includes the production group name, enabling phase-based execution:
+
+```json
+{
+  "inputs": [
+    { "node_id": "968", "slug": "client-name", "class_type": "String Literal", "group": "1-client-info-page" },
+    { "node_id": "977", "slug": "avatar-select", "class_type": "ImageFromBatch", "group": "3-avatar-proposals" }
+  ],
+  "outputs": [
+    { "node_id": "972", "slug": "client-intelligence", "class_type": "PreviewAny", "output_type": "text", "group": "1-client-info-page" },
+    { "node_id": "980", "slug": "avatar-proposals", "class_type": "SaveImage", "output_type": "image", "group": "3-avatar-proposals" },
+    { "node_id": "923", "slug": "demo-video-1", "class_type": "SaveVideo", "output_type": "video", "group": "5-videos" }
+  ]
+}
+```
+
+Phase-splitting from the schema without hardcoded slugs:
+
+```python
+schema = json.load(open("my-workflow.schema.json"))
+phase1_outputs = [o for o in schema["outputs"] if o["group"] in PHASE1_GROUPS]
+```
+
 ## API
 
 ### `POST /workflow-runner/save-api`
 
-Save an expanded API-format workflow. Called automatically by the frontend extension.
+Save an expanded API-format workflow. Called automatically by the frontend extension. Also generates `.schema.json` when `ui_workflow` is provided.
 
 ```json
 { "name": "my-workflow", "api_workflow": { ... }, "ui_workflow": { ... } }
@@ -69,18 +109,7 @@ Run a saved workflow with injected inputs.
 
 ### `GET /workflow-runner/schema/{name}`
 
-Returns detected inputs and outputs for a workflow.
-
-```json
-{
-  "inputs": [
-    { "node_id": "968", "slug": "client-name", "class_type": "String Literal" }
-  ],
-  "outputs": [
-    { "node_id": "923", "slug": "demo-video-1", "class_type": "SaveVideo", "output_type": "video" }
-  ]
-}
-```
+Returns detected inputs and outputs for a workflow (from the `.api.json`, not the persisted schema).
 
 ## Input injection
 
@@ -100,4 +129,4 @@ uv pip install pytest
 pytest
 ```
 
-Tests require a workflow fixture in `tests/fixtures/test_workflow.api.json` (not included in the repo — extract from a captured `/prompt` POST).
+Tests require workflow fixtures in `tests/fixtures/` (not included in the repo — extract from a captured `/prompt` POST).
