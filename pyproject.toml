@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-workflow-runner"
-version = "2026.4.0"
+version = "2026.4.1"
 description = "Auto-exports expanded API-format workflows on save and provides routes to run them with injected inputs"
 authors = [{ name = "hex" }]
 
