@@ -13,6 +13,7 @@ try:
         inject_inputs,
         load_api_workflow,
         prune_to_outputs,
+        scan_schema,
     )
 except ImportError:
     from workflow_runner import (
@@ -20,6 +21,7 @@ except ImportError:
         inject_inputs,
         load_api_workflow,
         prune_to_outputs,
+        scan_schema,
     )
 
 NODE_CLASS_MAPPINGS = {}
@@ -41,10 +43,14 @@ try:
 
     @PromptServer.instance.routes.post("/workflow-runner/save-api")
     async def save_api_format(request):
-        """Receive expanded API format from the frontend and save as .api.json."""
+        """Receive expanded API format from the frontend and save as .api.json.
+
+        Also generates .schema.json from the UI workflow if provided.
+        """
         data = await request.json()
         name = data.get("name")
         api_workflow = data.get("api_workflow")
+        ui_workflow = data.get("ui_workflow")
 
         if not name or not api_workflow:
             log.warning("save-api: missing 'name' or 'api_workflow'")
@@ -65,10 +71,20 @@ try:
 
         log.info("Saved %s (%d nodes)", api_path, len(api_workflow))
 
+        schema = None
+        if ui_workflow:
+            schema = scan_schema(ui_workflow)
+            schema_path = os.path.join(WORKFLOWS_DIR, f"{stem}.schema.json")
+            with open(schema_path, "w") as f:
+                json.dump(schema, f, indent=2)
+            log.info("Saved %s (%d inputs, %d outputs)",
+                     schema_path, len(schema["inputs"]), len(schema["outputs"]))
+
         return web.json_response({
             "status": "ok",
             "path": api_path,
             "nodes": len(api_workflow),
+            "schema": schema,
         })
 
     @PromptServer.instance.routes.post("/workflow-runner/run")

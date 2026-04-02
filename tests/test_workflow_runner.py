@@ -8,9 +8,9 @@ import pytest
 
 import workflow_runner
 
-FIXTURE_PATH = os.path.join(
-    os.path.dirname(__file__), "fixtures", "test_workflow.api.json"
-)
+FIXTURE_DIR = os.path.join(os.path.dirname(__file__), "fixtures")
+FIXTURE_PATH = os.path.join(FIXTURE_DIR, "test_workflow.api.json")
+UI_FIXTURE_PATH = os.path.join(FIXTURE_DIR, "test_workflow.ui.json")
 
 # The fixture is a captured /prompt POST for the demo-video-1 output path.
 # It contains 312 nodes — already pruned to that single output pipeline.
@@ -206,3 +206,72 @@ class TestPrepareWorkflow:
             output_slugs=["nonexistent-output"],
         )
         assert len(result) == 312
+
+
+# --- Schema scanner (from UI workflow color conventions) ---
+
+EXPECTED_INPUTS = {
+    "client-name": {"node_id": "968", "group": "1-client-info-page"},
+    "client-market": {"node_id": "969", "group": "1-client-info-page"},
+    "client-region": {"node_id": "933", "group": "1-client-info-page"},
+    "avatar-select": {"node_id": "977", "group": "3-avatar-proposals"},
+    "avatar-edits-request": {"node_id": "938", "group": "4-avatar-edit"},
+}
+
+EXPECTED_OUTPUTS = {
+    "client-intelligence": {"node_id": "972", "output_type": "text", "group": "1-client-info-page"},
+    "competitor-influencers": {"node_id": "921", "output_type": "text", "group": "2-competitor-analysis"},
+    "competitors-analysis": {"node_id": "922", "output_type": "text", "group": "2-competitor-analysis"},
+    "avatar-proposals": {"node_id": "980", "output_type": "image", "group": "3-avatar-proposals"},
+    "avatar-work": {"node_id": "985", "output_type": "image", "group": "4-avatar-edit"},
+    "avatar-social-life": {"node_id": "986", "output_type": "image", "group": "4-avatar-edit"},
+    "avatar-lifestyle": {"node_id": "987", "output_type": "image", "group": "4-avatar-edit"},
+    "avatar-edits": {"node_id": "978", "output_type": "image", "group": "4-avatar-edit"},
+    "demo-video-1": {"node_id": "923", "output_type": "video", "group": "5-videos"},
+    "demo-video-2": {"node_id": "924", "output_type": "video", "group": "5-videos"},
+    "demo-video-3": {"node_id": "925", "output_type": "video", "group": "5-videos"},
+}
+
+
+@pytest.fixture
+def ui_workflow():
+    with open(UI_FIXTURE_PATH) as f:
+        return json.load(f)
+
+
+class TestScanSchema:
+    def test_finds_all_inputs(self, ui_workflow):
+        schema = workflow_runner.scan_schema(ui_workflow)
+        found = {inp["slug"]: inp for inp in schema["inputs"]}
+        assert len(found) == 5
+        for slug, expected in EXPECTED_INPUTS.items():
+            assert slug in found, f"Missing input: {slug}"
+            assert found[slug]["node_id"] == expected["node_id"]
+            assert found[slug]["group"] == expected["group"]
+
+    def test_finds_all_outputs(self, ui_workflow):
+        schema = workflow_runner.scan_schema(ui_workflow)
+        found = {out["slug"]: out for out in schema["outputs"]}
+        assert len(found) == 11
+        for slug, expected in EXPECTED_OUTPUTS.items():
+            assert slug in found, f"Missing output: {slug}"
+            assert found[slug]["node_id"] == expected["node_id"]
+            assert found[slug]["output_type"] == expected["output_type"]
+            assert found[slug]["group"] == expected["group"]
+
+    def test_all_entries_have_group(self, ui_workflow):
+        schema = workflow_runner.scan_schema(ui_workflow)
+        for entry in schema["inputs"] + schema["outputs"]:
+            assert "group" in entry, f"Missing group for {entry['slug']}"
+            assert entry["group"], f"Empty group for {entry['slug']}"
+
+    def test_output_type_classification(self, ui_workflow):
+        schema = workflow_runner.scan_schema(ui_workflow)
+        found = {out["slug"]: out for out in schema["outputs"]}
+        assert found["client-intelligence"]["output_type"] == "text"
+        assert found["avatar-proposals"]["output_type"] == "image"
+        assert found["demo-video-1"]["output_type"] == "video"
+
+    def test_empty_workflow_returns_empty_schema(self):
+        schema = workflow_runner.scan_schema({"nodes": [], "groups": []})
+        assert schema == {"inputs": [], "outputs": []}

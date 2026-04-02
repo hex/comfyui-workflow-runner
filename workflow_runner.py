@@ -1,8 +1,63 @@
 # ABOUTME: Core logic for running ComfyUI workflows from pre-expanded .api.json files.
-# ABOUTME: Handles input injection by node title, dependency pruning, and schema detection.
+# ABOUTME: Handles schema scanning, input injection, dependency pruning, and schema detection.
 
 import json
 import os
+
+
+INPUT_NODE_COLOR = "#332922"
+OUTPUT_NODE_COLOR = "#232"
+PROD_GROUP_COLOR = "#8A8"
+
+
+def _classify_output_type(class_type: str) -> str:
+    if "SaveImage" in class_type:
+        return "image"
+    if "SaveVideo" in class_type:
+        return "video"
+    return "text"
+
+
+def scan_schema(ui_workflow: dict) -> dict:
+    """Scan a UI workflow for input/output nodes by color convention.
+
+    Input nodes: color #332922 inside green production groups (#8A8)
+    Output nodes: color #232 inside green production groups (#8A8)
+
+    Returns {inputs: [...], outputs: [...]} with node_id, slug, class_type,
+    group, and (for outputs) output_type.
+    """
+    prod_groups = [
+        g for g in ui_workflow.get("groups", [])
+        if g.get("color") == PROD_GROUP_COLOR
+    ]
+
+    inputs = []
+    outputs = []
+
+    for node in ui_workflow.get("nodes", []):
+        color = node.get("color", "")
+        if color not in (INPUT_NODE_COLOR, OUTPUT_NODE_COLOR):
+            continue
+
+        nx, ny = node["pos"][0], node["pos"][1]
+        for group in prod_groups:
+            gx, gy, gw, gh = group["bounding"]
+            if gx <= nx <= gx + gw and gy <= ny <= gy + gh:
+                entry = {
+                    "node_id": str(node["id"]),
+                    "slug": node.get("title", ""),
+                    "class_type": node.get("type", ""),
+                    "group": group["title"],
+                }
+                if color == INPUT_NODE_COLOR:
+                    inputs.append(entry)
+                else:
+                    entry["output_type"] = _classify_output_type(entry["class_type"])
+                    outputs.append(entry)
+                break
+
+    return {"inputs": inputs, "outputs": outputs}
 
 
 def load_api_workflow(path: str) -> dict:
